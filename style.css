@@ -75,25 +75,25 @@ header {
   height: 55px;
 }
 
-nav ul a {
+/* navigation */
+
+.menu a {
   color: var(--clr-white);
   text-decoration: none;
 }
 
-nav ul a:hover {
+.menu a:hover {
   color: var(--clr-gold);
 }
 
-/* start submenu */
-
-nav ul {
+.menu {
   background: var(--clr-dark-blue);
   list-style: none;
   margin: 0;
   padding-left: 0;
 }
 
-nav li {
+.menu-item {
   color: var(--clr-white);
   background: var(--clr-dark-blue);
   display: block;
@@ -104,15 +104,15 @@ nav li {
   transition-duration: 0.5s;
 }
 
-nav li a {
+.menu-item a {
   color: var(--clr-white);
 }
 
-nav li:hover {
+.menu-item:hover {
   color: var(--clr-gold);
 }
 
-nav ul li ul {
+.dropdown {
   visibility: hidden;
   opacity: 0;
   min-width: 5rem;
@@ -123,31 +123,33 @@ nav ul li ul {
   display: none;
 }
 
-.dropdown li {
+.dropdown-item {
   background: var(--clr-light-blue);
+  padding: 15px;
 }
 
-.dropdown li:hover {
+.dropdown-item:hover {
   color: var(--clr-white);
   background: var(--clr-gold);
 }
 
-nav ul li:hover > ul,
-ul li ul:hover {
+.menu-item:hover > .menu,
+.dropdown:hover {
   visibility: visible;
   opacity: 1;
   display: block;
 }
 
-nav ul li ul li {
+.dropdown-item {
   clear: both;
   width: 100%;
 }
 
-/* einde submenu */
+/* end navigation */
 
 .content {
   flex: 1;
+  flex-direction: column;
 }
 
 .footer {
