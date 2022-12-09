@@ -25,30 +25,36 @@
           /></a>
         </div>
         <nav role="navigation">
-          <ul class="flex">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="kamers.html">Kamers</a></li>
-            <li><a href="galerij.html">Galerij</a></li>
-            <li>
+          <div class="menu flex">
+            <div class="menu-item"><a href="index.html">Home</a></div>
+            <div class="menu-item"><a href="kamers.html">Kamers</a></div>
+            <div class="menu-item"><a href="galerij.html">Galerij</a></div>
+            <div class="menu-item">
               <a href="informatie.html"
                 >Informatie <i class="fa-solid fa-angle-down"></i
               ></a>
-              <ul class="dropdown">
-                <a href="fruitstreek.html"><li>Fruitstreek</li></a>
-                <a href="ontbijt.html"><li>Ontbijt</li></a>
-
-                <a href="bezienswaardigheden.html"
-                  ><li>Bezienswaardigheden</li></a
+              <div class="menu dropdown">
+                <a href="informatie.html/#fruitstreek"
+                  ><div class="dropdown-item">Fruitstreek</div></a
+                >
+                <a href="informatie.html/#ontbijt"
+                  ><div class="dropdown-item">Ontbijt</div></a
                 >
 
-                <a href="routesenfietsverhuur.html"
-                  ><li>Routes en fietsverhuur</li></a
+                <a href="informatie.html/#bezienswaardigheden"
+                  ><div class="dropdown-item">Bezienswaardigheden</div></a
                 >
-              </ul>
-            </li>
-            <li><a href="reserveren.html">Reserveren</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
+
+                <a href="informatie.html/#routesenfietsverhuur"
+                  ><div class="dropdown-item">Routes en fietsverhuur</div></a
+                >
+              </div>
+            </div>
+            <div class="menu-item">
+              <a href="reserveren.html">Reserveren</a>
+            </div>
+            <div class="menu-item"><a href="contact.html">Contact</a></div>
+          </div>
         </nav>
       </div>
     </header>
@@ -57,7 +63,7 @@
       <div class="container">
         <div class="kamerkaart">
           <a href="kamers.html"><img src="" alt="" /></a>
-          <a href="kamers.html"><h1>Kamer Tijm</h1></a>
+          <a href="kamers.html"><h2>Kamer Tijm</h2></a>
           <span>2 personen</span>
           <span>€65 p.p.p.n.</span>
           <a href="kamers.html"><div class="button">Ontdek nu</div></a>
@@ -65,7 +71,7 @@
         </div>
         <div class="kamerkaart">
           <a href="kamers.html"><img src="" alt="" /></a>
-          <a href="kamers.html"><h1>Kamer Lavendel</h1></a>
+          <a href="kamers.html"><h2>Kamer Lavendel</h2></a>
           <span>2 personen</span>
           <span>€65 p.p.p.n.</span>
           <a href="kamers.html"><div class="button">Ontdek nu</div></a>
@@ -73,13 +79,44 @@
         </div>
         <div class="kamerkaart">
           <a href="kamers.html"><img src="" alt="" /></a>
-          <a href="kamers.html"><h1>Vakantiehuisje 't Wijnstokje</h1></a>
-          <span>2 personen</span>
+          <a href="kamers.html"><h2>Vakantiehuisje 't Wijnstokje</h2></a>
+          <span>4 personen</span>
           <span>€65 p.p.p.n.</span>
           <a href="kamers.html"><div class="button">Ontdek nu</div></a>
           <a href="reserveren.html"><div class="button">Reserveer</div></a>
         </div>
       </div>
+      <div class="infobanner">
+        <span
+          >Ga een kijkje nemen naar één van de meest populaire
+          bezienswaardigheden in Limburg. Dit kunstwerk kreeg de naam “Reading
+          between the Lines” en is gelegen in Borgloon, het dorpje naast Heers.
+        </span>
+      </div>
+      <section class="welkom container">
+        <img src="" alt="" />
+        <h1>Jos en Maryse heten u welkom</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+          mollitia, molestiae quas vel sint commodi repudiandae consequuntur
+          voluptatum laborum numquam blanditiis harum quisquam eius sed odit
+          fugiat iusto fuga praesentium optio, eaque rerum! Provident similique
+          accusantium nemo autem.
+        </p>
+      </section>
+      <section class="gastenboek">
+        <h2>Gastenboek</h2>
+        <p>
+          Dag Maryse, Met een beetje weemoed denken we terug aan ons verblijf
+          bij jullie. Heerlijk rustig, een binnenkoer waar ik alleen maar van
+          kan dromen. Bedankt voor het warme onthaal, het lekkere en zeer
+          uitgebreide ontbijt. Ook voor de tips van wat we zeker moesten gezien
+          hebben... We hebben genoten van de wandel en fietstochten door de
+          prachtige bloesems. Pure ontspanning, ook mede door het zonnige weer.
+          Intussen zijn we een aantal dagen verder, en draaien terug op volle
+          toeren. Maar we kunnen terugblikken op onze fijne herinneringen!
+        </p>
+      </section>
     </div>
     <footer class="bg-blue">
       <div class="container flex footer">
