@@ -127,6 +127,11 @@ nav ul li ul {
   background: var(--clr-light-blue);
 }
 
+.dropdown li:hover {
+  color: var(--clr-white);
+  background: var(--clr-gold);
+}
+
 nav ul li:hover > ul,
 ul li ul:hover {
   visibility: visible;
