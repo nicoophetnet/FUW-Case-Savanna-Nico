@@ -65,6 +65,10 @@ ul {
   display: flex;
 }
 
+.column {
+  flex-direction: column;
+}
+
 header {
   height: 85px;
 }
