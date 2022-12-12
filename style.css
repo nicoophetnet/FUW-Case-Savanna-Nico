@@ -29,6 +29,10 @@ body {
   color: var(--clr-dark-blue);
 }
 
+p {
+  line-height: 24px;
+}
+
 h1,
 h2,
 h3,
@@ -209,6 +213,7 @@ header {
   text-align: center;
   margin: 0;
   z-index: 1;
+  line-height: 70px;
 }
 
 .overlaywrap {
@@ -267,7 +272,7 @@ header {
   position: relative;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
+  margin: 0 0px 50px 0px;
 }
 
 .overlayinfo {
@@ -294,6 +299,10 @@ header {
 }
 /* end infobanner */
 
+.welkom {
+  margin-bottom: 50px;
+}
+
 .welkom img {
   margin-right: 50px;
 }
@@ -303,9 +312,32 @@ header {
   width: 550px;
 }
 
-.review {
-  width: 500px;
-  height: 200px;
+.gastenboek {
+  color: var(--clr-white);
+  margin: 0 50px;
+  padding: 0 50px;
+  height: 250px;
+}
+
+.gastenboek p {
+  text-align: left;
+  padding: 25px 0;
+}
+
+.gastentitle h2 {
+  color: var(--clr-gold);
+  text-align: center;
+  padding: 25px;
+}
+
+.gastenboek span {
+  font-family: var(--ff-nav-400);
+  padding-left: 50px;
+  padding-bottom: 50px;
+}
+
+.gastenboekwrap {
+  margin-bottom: 50px;
 }
 
 /* start footer */
