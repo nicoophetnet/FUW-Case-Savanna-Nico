@@ -62,7 +62,8 @@
       <h1>Onze charmekamers</h1>
       <section class="kamer">
         <div class="flex">
-          <div class="slideshow">slideshow</div>
+          <div class="slideshow"><img src="images/kamertijm.jpg" alt="" /></div>
+          <div class="slider-nav"></div>
           <div class="kamer-info flex column">
             <h2>Kamer Tijm</h2>
             <p>
@@ -143,7 +144,7 @@
       </section>
     </div>
     <footer class="bg-blue">
-      <div class="container flex footer">
+      <div class="container spacebtw alignitems footer">
         <a href="index.html"><span>© 't Wijngaardhof</span></a>
         <ul class="flex">
           <li>
@@ -160,5 +161,29 @@
         </ul>
       </div>
     </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+      $(".slideshow").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: ".slider-nav",
+      });
+      $(".slider-nav").slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: ".slideshow",
+        dots: true,
+        centerMode: true,
+        focusOnSelect: true,
+      });
+    </script>
   </body>
 </html>
