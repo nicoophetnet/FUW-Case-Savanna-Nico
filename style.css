@@ -191,7 +191,7 @@ background-image: url(images/fotobanner.jpg);
 background-size: cover;
 background-position: center;
 justify-content: center;
-height: 400px;
+height: 500px;
 }
 
 .fotobanner span {
@@ -257,6 +257,22 @@ font-size: 20px;
 }
 
 /* end kamerkaartsen */
+
+/* start infobanner */
+
+.infobanner {
+  height: 400px;
+}
+
+.slick-prev slick-arrow{
+
+}
+
+.slick-next slick-arrow{
+  
+}
+
+/* end infobanner */
 
 
 
