@@ -20,7 +20,7 @@
   </head>
   <body>
     <header class="bg-blue">
-      <div class="container flex">
+      <div class="container flex spacebtw alignitems">
         <div class="logo flex">
           <a href="index.html"
             ><img src="images/logo.svg" alt="'t Wijngaardhof sinds 1990"
@@ -166,7 +166,7 @@
           </a>
         </div>
         <section class="welkom container flex">
-          <img src="" alt="" />
+          <img src="images/josenmaryse400.jpg" alt="Jos en Maryse" />
           <div class="flex column">
             <h1 class="brush">Jos en Maryse heten u welkom</h1>
             <p>
@@ -179,25 +179,27 @@
           </div>
         </section>
         <section class="gastenboek container bg-blue">
-          <h2>Gastenboek</h2>
-          <p>
-            Dag Maryse, Met een beetje weemoed denken we terug aan ons verblijf
-            bij jullie. Heerlijk rustig, een binnenkoer waar ik alleen maar van
-            kan dromen. Bedankt voor het warme onthaal, het lekkere en zeer
-            uitgebreide ontbijt. Ook voor de tips van wat we zeker moesten
-            gezien hebben... We hebben genoten van de wandel en fietstochten
-            door de prachtige bloesems. Pure ontspanning, ook mede door het
-            zonnige weer. Intussen zijn we een aantal dagen verder, en draaien
-            terug op volle toeren. Maar we kunnen terugblikken op onze fijne
-            herinneringen!
-          </p>
-          <span class="gasten">- Gerda & Willy Brone</span>
+          <div class="review">
+            <h2>Gastenboek</h2>
+            <p>
+              Dag Maryse, Met een beetje weemoed denken we terug aan ons
+              verblijf bij jullie. Heerlijk rustig, een binnenkoer waar ik
+              alleen maar van kan dromen. Bedankt voor het warme onthaal, het
+              lekkere en zeer uitgebreide ontbijt. Ook voor de tips van wat we
+              zeker moesten gezien hebben... We hebben genoten van de wandel en
+              fietstochten door de prachtige bloesems. Pure ontspanning, ook
+              mede door het zonnige weer. Intussen zijn we een aantal dagen
+              verder, en draaien terug op volle toeren. Maar we kunnen
+              terugblikken op onze fijne herinneringen!
+            </p>
+            <span class="gasten">- Gerda & Willy Brone</span>
+          </div>
         </section>
       </div>
     </div>
 
     <footer class="bg-blue">
-      <div class="container flex footer">
+      <div class="container spacebtw alignitems footer">
         <a href="index.html"><span>© 't Wijngaardhof</span></a>
         <ul class="flex">
           <li>
@@ -223,6 +225,12 @@
 
     <script type="text/javascript">
       $(".infobanner").slick({
+        autoplay: true,
+        autoplaySpeed: 2000,
+        accessibility: true,
+        arrows: true,
+      });
+      $(".gastenboek").slick({
         autoplay: true,
         autoplaySpeed: 2000,
         accessibility: true,

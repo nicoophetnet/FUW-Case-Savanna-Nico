@@ -26,6 +26,7 @@ body {
   flex-direction: column;
   background-color: var(--clr-white);
   font-family: var(--ff-p-400);
+  color: var(--clr-dark-blue);
 }
 
 h1,
@@ -73,8 +74,6 @@ ul {
 .container {
   width: 1100px;
   margin: 0 auto;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .content {
@@ -99,6 +98,11 @@ ul {
 .spacebtw {
   display: flex;
   justify-content: space-between;
+}
+
+.alignitems {
+  display: flex;
+  align-items: center;
 }
 
 header {
@@ -263,6 +267,7 @@ header {
   position: relative;
   justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 .overlayinfo {
@@ -288,6 +293,20 @@ header {
 .slick-next slick-arrow {
 }
 /* end infobanner */
+
+.welkom img {
+  margin-right: 50px;
+}
+
+.welkom p {
+  margin: 25px 0;
+  width: 550px;
+}
+
+.review {
+  width: 500px;
+  height: 200px;
+}
 
 /* start footer */
 .footer {
