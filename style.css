@@ -46,6 +46,7 @@ h6 {
 h1 {
   color: var(--clr-dark-blue);
   font-size: 64px;
+  text-align: center;
 }
 
 h2 {
@@ -107,6 +108,11 @@ ul {
 .alignitems {
   display: flex;
   align-items: center;
+}
+
+.spaceeven {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 header {
@@ -338,6 +344,48 @@ header {
 
 .gastenboekwrap {
   margin-bottom: 50px;
+}
+
+.hoofdtitel {
+  padding-top: 50px;
+}
+
+.kamer-info {
+  padding-left: 50px;
+}
+
+.kamer-info2 p {
+}
+
+.kamer-info p,
+.kamer-info2 p {
+  padding-right: 50px;
+  padding-bottom: 50px;
+}
+
+.kamer-info a {
+  text-decoration: none;
+}
+
+.iconlist {
+  padding-right: 25px;
+}
+
+.kamer-info span {
+  font-size: 13px;
+}
+
+.kamer {
+  margin: 25px 0;
+}
+
+.kamer ul {
+  width: 300px;
+  line-height: 35px;
+}
+
+.kamer ul li i {
+  color: var(--clr-gold);
 }
 
 /* start footer */
