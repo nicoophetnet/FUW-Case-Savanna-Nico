@@ -112,53 +112,55 @@
             </div>
           </div>
         </div>
-      </div>
-      <span
-        >Ga een kijkje nemen naar één van de meest populaire bezienswaardigheden
-        in Limburg. Dit kunstwerk kreeg de naam “Reading between the Lines” en
-        is gelegen in Borgloon, het dorpje naast Heers.
-      </span>
-      <ul class="infobanner">
-        <li>
-          <img
-            src="images/kopie.jpg"
-            alt="Een vierkantshoeve in de fruitstreek"
-          />
-        </li>
-        <li>
-          <img
-            src="images/kopie.jpg"
-            alt="Een vierkantshoeve in de fruitstreek"
-          />
-        </li>
-      </ul>
-      <section class="welkom container flex">
-        <img src="" alt="" />
-        <div class="flex column">
-          <h1>Jos en Maryse heten u welkom</h1>
+
+        <span
+          >Ga een kijkje nemen naar één van de meest populaire
+          bezienswaardigheden in Limburg. Dit kunstwerk kreeg de naam “Reading
+          between the Lines” en is gelegen in Borgloon, het dorpje naast Heers.
+        </span>
+        <ul class="infobanner">
+          <li>
+            <img
+              src="images/kopie.jpg"
+              alt="Een vierkantshoeve in de fruitstreek"
+            />
+          </li>
+          <li>
+            <img
+              src="images/kopie.jpg"
+              alt="Een vierkantshoeve in de fruitstreek"
+            />
+          </li>
+        </ul>
+        <section class="welkom container flex">
+          <img src="" alt="" />
+          <div class="flex column">
+            <h1 class="brush">Jos en Maryse heten u welkom</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+              mollitia, molestiae quas vel sint commodi repudiandae consequuntur
+              voluptatum laborum numquam blanditiis harum quisquam eius sed odit
+              fugiat iusto fuga praesentium optio, eaque rerum! Provident
+              similique accusantium nemo autem.
+            </p>
+          </div>
+        </section>
+        <section class="gastenboek container bg-blue">
+          <h2>Gastenboek</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-            mollitia, molestiae quas vel sint commodi repudiandae consequuntur
-            voluptatum laborum numquam blanditiis harum quisquam eius sed odit
-            fugiat iusto fuga praesentium optio, eaque rerum! Provident
-            similique accusantium nemo autem.
+            Dag Maryse, Met een beetje weemoed denken we terug aan ons verblijf
+            bij jullie. Heerlijk rustig, een binnenkoer waar ik alleen maar van
+            kan dromen. Bedankt voor het warme onthaal, het lekkere en zeer
+            uitgebreide ontbijt. Ook voor de tips van wat we zeker moesten
+            gezien hebben... We hebben genoten van de wandel en fietstochten
+            door de prachtige bloesems. Pure ontspanning, ook mede door het
+            zonnige weer. Intussen zijn we een aantal dagen verder, en draaien
+            terug op volle toeren. Maar we kunnen terugblikken op onze fijne
+            herinneringen!
           </p>
-        </div>
-      </section>
-      <section class="gastenboek container bg-blue">
-        <h2>Gastenboek</h2>
-        <p>
-          Dag Maryse, Met een beetje weemoed denken we terug aan ons verblijf
-          bij jullie. Heerlijk rustig, een binnenkoer waar ik alleen maar van
-          kan dromen. Bedankt voor het warme onthaal, het lekkere en zeer
-          uitgebreide ontbijt. Ook voor de tips van wat we zeker moesten gezien
-          hebben... We hebben genoten van de wandel en fietstochten door de
-          prachtige bloesems. Pure ontspanning, ook mede door het zonnige weer.
-          Intussen zijn we een aantal dagen verder, en draaien terug op volle
-          toeren. Maar we kunnen terugblikken op onze fijne herinneringen!
-        </p>
-        <span class="gasten">- Gerda & Willy Brone</span>
-      </section>
+          <span class="gasten">- Gerda & Willy Brone</span>
+        </section>
+      </div>
     </div>
 
     <footer class="bg-blue">
@@ -180,17 +182,19 @@
       </div>
     </footer>
     <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-1.11.0.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
     ></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
 
     <script type="text/javascript">
-      $(".infobanner").slick();
+      $(".infobanner").slick({
+        autoplay: true,
+        autoplaySpeed: 2000,
+        accessibility: true,
+        arrows: true,
+      });
     </script>
   </body>
 </html>
