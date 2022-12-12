@@ -77,6 +77,11 @@ ul {
   align-items: center;
 }
 
+.content {
+  flex: 1;
+  flex-direction: column;
+}
+
 .flex {
   display: flex;
 }
@@ -100,6 +105,7 @@ header {
   height: 85px;
   position: sticky;
   top: 0;
+  z-index: 99;
 }
 
 .logo {
@@ -113,7 +119,6 @@ header {
 }
 
 /* navigation */
-
 .menu a {
   color: var(--clr-white);
   text-decoration: none;
@@ -181,16 +186,9 @@ header {
   clear: both;
   width: 100%;
 }
-
 /* end navigation */
 
-.content {
-  flex: 1;
-  flex-direction: column;
-}
-
 /* start banner */
-
 .fotobanner {
   background-image: url(images/fotobanner.jpg);
   background-size: cover;
@@ -220,11 +218,9 @@ header {
   opacity: 0.2;
   position: absolute;
 }
-
 /* end banner */
 
 /* start kamerkaarten */
-
 .kamerkaart {
   padding: 20px;
   margin: 50px 25px;
@@ -260,13 +256,15 @@ header {
   border-radius: 20px;
   margin: 0 12px;
 }
-
 /* end kamerkaartsen */
 
 /* start infobanner */
-
 .infobanner {
   height: 400px;
+}
+
+.infobanner span{
+  display: block;
 }
 
 .slick-prev slick-arrow {
@@ -274,11 +272,9 @@ header {
 
 .slick-next slick-arrow {
 }
-
 /* end infobanner */
 
 /* start footer */
-
 .footer {
   height: 50px;
 }
@@ -296,5 +292,4 @@ header {
   font-size: 25px;
   padding-left: 10px;
 }
-
 /* end footer */
