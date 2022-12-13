@@ -77,7 +77,11 @@ ul {
 a {
   text-decoration: none;
   color: var(--clr-dark-blue);
-  font-family: var(--ff-p-400);
+  transition: color 0.5s;
+}
+
+a:hover {
+  color: var(--clr-gold);
 }
 
 .bg-white {
@@ -165,11 +169,15 @@ hr {
 .menu a {
   color: var(--clr-white);
   font-family: var(--ff-nav-400);
+  font-size: 16px;
   text-decoration: none;
   transition: color 0.5s;
 }
-
 .menu a:hover {
+  color: var(--clr-gold);
+}
+
+.menu a:active {
   color: var(--clr-gold);
 }
 
@@ -203,20 +211,21 @@ hr {
   opacity: 0;
   min-width: 5rem;
   position: absolute;
-  transition: all 0.5s ease;
   margin-top: 1rem;
   left: 0;
   display: none;
 }
 
 .dropdown-item {
-  background: var(--clr-light-blue);
+  background-color: var(--clr-light-blue);
+  color: var(--clr-white);
+  transition: background-color 0.7s;
   padding: 15px;
 }
 
 .dropdown-item:hover {
   color: var(--clr-white);
-  background: var(--clr-gold);
+  background-color: var(--clr-gold);
 }
 
 .menu-item:hover > .menu,
