@@ -25,7 +25,8 @@ let allesCorrectIngevuld = true;
 // control functions
 
 function controleerAankomstDate() {
-  if (aankomstDate < Date) {
+  let today = new Date();
+  if (aankomstDate < today.getDate()) {
     document.getElementById("aankomst_error").innerHTML =
       "Kies een dag in de toekomst!";
     allesCorrectIngevuld = false;
@@ -35,7 +36,7 @@ function controleerAankomstDate() {
 }
 
 function controleerVertrekDate() {
-  if (aankomstDate < vertrekDate) {
+  if (aankomstDate >= vertrekDate) {
     document.getElementById("vertrek_error").innerHTML =
       "Kies voor een latere dag!";
     allesCorrectIngevuld = false;
@@ -150,18 +151,24 @@ function controleerVoorwaardenLand() {
 // send function
 
 function verstuur() {
+  aankomstDate = document.getElementById("aankomst").value;
+  vertrekDate = document.getElementById("vertrek").value;
+  logementKeuze = document.getElementById("logement").value;
+  aantalBezoekers = document.getElementById("achternaam").value;
+
   voornaamTxt = document.getElementById("voornaam").value;
-  achternaamTxt = document.getElementById("achternaam").value;
+  achternaamTxt = document.getElementById("aantalbezoekers").value;
+  emailTxt = document.getElementById("email").value;
+  emailHerhaalTxt = document.getElementById("emailherhaal").value;
+  telTxt = document.getElementById("telefoonnr").value;
+
   straatnaamTxt = document.getElementById("straatnaam").value;
   straatnummerTxt = document.getElementById("straatnummer").value;
+  busTxt = document.getElementById("bus").value;
   postcodeTxt = document.getElementById("postcode").value;
-  emailTxt = document.getElementById("email").value;
-  wachtwoordTxt = document.getElementById("wachtwoord").value;
-  wachtwoordBevestigingTxt = document.getElementById(
-    "wachtwoordBevestiging"
-  ).value;
-  geselecteerdeWagen = document.getElementById("wagen").selectedIndex;
-  wagenTxt = document.getElementById("wagen").value;
-}
+  woonplaatsTxt = document.getElementById("plaats").value;
+  landTxt = document.getElementById("land").value;
 
+  let allesCorrectIngevuld = true;
+}
 // send to mail
