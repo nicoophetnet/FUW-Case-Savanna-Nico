@@ -29,7 +29,13 @@ body {
   color: var(--clr-dark-blue);
 }
 
+.hoofdtitel {
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+
 p {
+  font-size: 16 px;
   line-height: 24px;
 }
 
@@ -68,6 +74,12 @@ ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+  color: var(--clr-dark-blue);
+  font-family: var(--ff-p-400);
+}
+
 .bg-white {
   background-color: var(--clr-white);
 }
@@ -95,14 +107,14 @@ ul {
   flex-direction: column;
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
 .center {
   display: flex;
   justify-content: center;
-}
-
-.spacebtw {
-  display: flex;
-  justify-content: space-between;
 }
 
 .alignitems {
@@ -110,9 +122,22 @@ ul {
   align-items: center;
 }
 
+.spacebtw {
+  display: flex;
+  justify-content: space-between;
+}
+
 .spaceeven {
   display: flex;
   justify-content: space-evenly;
+}
+
+.end {
+ justify-content: flex-end;
+}
+
+.start {
+ justify-content: flex-start;
 }
 
 header {
@@ -132,7 +157,11 @@ header {
   height: 55px;
 }
 
-/* navigation */
+hr {
+  border: 1px solid var(--clr-gold);
+}
+
+/* START NAVIGATION */
 .menu a {
   color: var(--clr-white);
   text-decoration: none;
@@ -200,9 +229,9 @@ header {
   clear: both;
   width: 100%;
 }
-/* end navigation */
+/* END NAVIGATION */
 
-/* start banner */
+/* START BANNER */
 .fotobanner {
   background-image: url(images/fotobanner.jpg);
   background-size: cover;
@@ -213,13 +242,13 @@ header {
 
 .fotobanner span {
   font-family: var(--ff-h-400);
-  font-size: 64px;
+  font-size: 100px;
   color: var(--clr-white);
   display: block;
   text-align: center;
   margin: 0;
   z-index: 1;
-  line-height: 70px;
+  line-height: 100px;
 }
 
 .overlaywrap {
@@ -233,9 +262,9 @@ header {
   opacity: 0.2;
   position: absolute;
 }
-/* end banner */
+/* END BANNER */
 
-/* start kamerkaarten */
+/* START KAMERKAARTEN */
 .kamerkaart {
   padding: 20px;
   margin: 50px 25px;
@@ -247,7 +276,8 @@ header {
 
 .kamerkaart a {
   color: var(--clr-gold);
-  text-decoration: none;
+  font-family: var(--ff-h-400);
+  font-size: 36px;
 }
 
 .kamerkaart span {
@@ -271,9 +301,14 @@ header {
   border-radius: 20px;
   margin: 0 12px;
 }
-/* end kamerkaartsen */
 
-/* start infobanner */
+.button:hover {
+  background-color: var(--clr-light-blue);
+  border: 1px solid var(--clr-light-blue);
+}
+/* END KAMERKAARTEN */
+
+/* START INFOBANNER */
 .infobanner {
   position: relative;
   justify-content: center;
@@ -303,8 +338,9 @@ header {
 
 .slick-next slick-arrow {
 }
-/* end infobanner */
+/* END INFOBANNER */
 
+/* START WELKOMSBERICHT */
 .welkom {
   margin-bottom: 50px;
 }
@@ -317,7 +353,9 @@ header {
   margin: 25px 0;
   width: 550px;
 }
+/* END WELKOMSBERICHT */
 
+/* START GASTENBOEK */
 .gastenboek {
   color: var(--clr-white);
   margin: 0 50px;
@@ -345,16 +383,16 @@ header {
 .gastenboekwrap {
   margin-bottom: 50px;
 }
+/* END GASTENBOEK */
 
-.hoofdtitel {
-  padding-top: 50px;
-}
-
+/* START KAMERS */
 .kamer-info {
   padding-left: 50px;
+  width: 500px;
 }
 
 .kamer-info2 p {
+  width: 450px;
 }
 
 .kamer-info p,
@@ -364,11 +402,18 @@ header {
 }
 
 .kamer-info a {
+  padding-right: 50px;
   text-decoration: none;
 }
 
 .iconlist {
   padding-right: 25px;
+  padding-left: 25px;
+}
+
+.iconlist2 {
+  padding-right: 50px;
+  padding-left: 25px;
 }
 
 .kamer-info span {
@@ -376,11 +421,18 @@ header {
 }
 
 .kamer {
-  margin: 25px 0;
+  margin: 50px 0;
+}
+
+.kamer h2 {
+  margin-bottom: 20px;
+}
+
+.kamer2 {
+  margin-bottom: 70px;
 }
 
 .kamer ul {
-  width: 300px;
   line-height: 35px;
 }
 
@@ -388,7 +440,196 @@ header {
   color: var(--clr-gold);
 }
 
-/* start footer */
+.pppn {
+  padding-right: 75px;
+}
+
+.button2 {
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: var(--clr-dark-blue);
+  color: var(--clr-white);
+  font-family: var(--ff-nav-400);
+  font-size: 13px;
+  border: 1px solid var(--clr-dark-blue);
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+.button2:hover {
+  background-color: var(--clr-light-blue);
+  border: 1px solid var(--clr-light-blue);
+}
+/* END KAMERS */
+
+/* START RESERVEREN*/
+form {
+  margin-bottom: 70px;
+}
+
+form label {
+  font-family: var(--ff-p-400);
+  font-size: 16px;
+  color: var(--clr-dark-blue);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+form select {
+  font-family: var(--ff-p-400);
+  font-size: 16px;
+  color: var(--clr-dark-blue);
+  background-color: #DFDFDF;
+  border: 1px solid #DFDFDF;
+  height: 30px;
+}
+
+form input {
+  font-family: var(--ff-p-400);
+  font-size: 16px;
+  color: var(--clr-dark-blue);
+  background-color: #DFDFDF;
+  border: 1px solid #DFDFDF;
+  height: 30px;
+}
+
+form span {
+  font-family: var(--ff-p-400);
+  font-size: 16px;
+  color: var(--clr-dark-blue);
+  font-style: italic;
+}
+
+form a {
+  text-decoration: underline;
+}
+
+.keuze {
+  margin-bottom: 50px;
+}
+
+.keuze select {
+  margin-left: 50px;
+  margin-bottom: 30px;
+}
+
+.keuze input {
+  width: 120px;
+}
+
+.keuze span {
+  margin-top: 30px;
+}
+
+#aantalbezoekers {
+  width: 60px;
+  text-align: center;
+}
+
+.contactgegevens {
+  margin-bottom: 70px;
+}
+
+.contactgegevens h2 {
+ margin-top: 50px;
+ margin-bottom: 30px;
+}
+
+.contactgegevens input {
+ width: 400px;
+}
+
+.adresgegevens {
+  margin-bottom: 70px;
+}
+
+.adresgegevens h2 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+ .adresgegevens input {
+  margin-left: 20px;
+  width: 400px;
+}
+
+.adresgegevens label {
+  margin-left: 20px;
+}
+
+#nr {
+  width: 80px;
+}
+
+#bus {
+  width: 60px;
+}
+
+#postcode {
+  width: 160px;
+}
+
+#plaats {
+  width: 400px;
+}
+
+.gelezen {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+input[type=submit] {
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: var(--clr-dark-blue);
+  color: var(--clr-white);
+  font-family: var(--ff-nav-400);
+  font-size: 13px;
+  border: 1px solid var(--clr-dark-blue);
+  border-radius: 20px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  height: 40px;
+  width: 160px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: var(--clr-light-blue);
+  border: 1px solid var(--clr-light-blue);
+}
+/* END RESERVEREN */
+
+/* START CONTACT */
+.contactinfo h2 {
+  margin-bottom: 30px;
+  font-style: normal;
+}
+
+address span {
+  font-style: normal;
+  line-height: 25px;
+  font-size: 18px;
+}
+
+.contactinfo ul {
+  margin-top: 50px;
+}
+
+.contactinfo li {
+  line-height: 30px;
+  font-size: 18px;
+}
+
+.contactinfo ul li i {
+  font-size: 18px;
+  color: var(--clr-gold);
+}
+/* END CONTACT */
+
+/* START FOOTER*/
 .footer {
   height: 50px;
 }
@@ -406,4 +647,4 @@ header {
   font-size: 25px;
   padding-left: 10px;
 }
-/* end footer */
+/* END FOOTER */
