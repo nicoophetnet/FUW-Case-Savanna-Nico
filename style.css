@@ -296,14 +296,15 @@ hr {
   color: var(--clr-white);
   font-family: var(--ff-nav-400);
   font-size: 13px;
-  border: 1px solid var(--clr-gold);
+  border: none;
   border-radius: 20px;
   margin: 0 12px;
+  transition: background-color 0.7s;
 }
 
 .button:hover {
   background-color: var(--clr-light-blue);
-  border: 1px solid var(--clr-light-blue);
+  border: none;
 }
 /* END KAMERKAARTEN */
 
@@ -451,14 +452,15 @@ hr {
   color: var(--clr-white);
   font-family: var(--ff-nav-400);
   font-size: 13px;
-  border: 1px solid var(--clr-dark-blue);
+  border: none;
   border-radius: 20px;
   padding: 10px 20px;
+  transition: background-color 0.7s;
 }
 
 .button2:hover {
   background-color: var(--clr-light-blue);
-  border: 1px solid var(--clr-light-blue);
+  border: none;
 }
 /* END KAMERS */
 
@@ -578,7 +580,11 @@ form a {
   margin-bottom: 30px;
 }
 
-input[type="submit"] {
+.gelezen label {
+  padding-left: 10px;
+}
+
+.button3 {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -593,9 +599,10 @@ input[type="submit"] {
   height: 40px;
   width: 160px;
   cursor: pointer;
+  transition: background-color 0.7s;
 }
 
-input[type="submit"]:hover {
+.button3:hover {
   background-color: var(--clr-light-blue);
   border: 1px solid var(--clr-light-blue);
 }
