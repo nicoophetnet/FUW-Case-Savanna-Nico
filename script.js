@@ -20,7 +20,7 @@ let postcodeTxt;
 let woonplaatsTxt;
 let landTxt;
 
-let allesCorrectIngevuld = true;
+let allesCorrectIngevuld;
 
 // control functions
 
@@ -149,7 +149,6 @@ function controleerVoorwaardenLand() {
 }
 
 // send function
-
 function verstuur() {
   aankomstDate = document.getElementById("aankomst").value;
   vertrekDate = document.getElementById("vertrek").value;
@@ -169,7 +168,7 @@ function verstuur() {
   woonplaatsTxt = document.getElementById("plaats").value;
   landTxt = document.getElementById("land").value;
 
-  let allesCorrectIngevuld = true;
+  allesCorrectIngevuld = true;
 
   if (logementKeuze == 0) {
     document.getElementById("logement_error").innerHTML = "Maak een keuze...";
@@ -257,7 +256,9 @@ function verstuur() {
     controleerVoorwaardenLand();
   }
 }
+
 // send to mail
+
 if (allesCorrectIngevuld) {
   let link =
     "mailto:" +
