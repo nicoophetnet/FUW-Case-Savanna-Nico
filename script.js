@@ -170,5 +170,140 @@ function verstuur() {
   landTxt = document.getElementById("land").value;
 
   let allesCorrectIngevuld = true;
+
+  if (logementKeuze == 0) {
+    document.getElementById("logement_error").innerHTML = "Maak een keuze...";
+    allesCorrectIngevuld = false;
+  } else {
+    document.getElementById("logement_error").innerHTML = "";
+  }
+
+  if (voornaamTxt.length == 0) {
+    document.getElementById("voornaam_error").innerHTML =
+      "Vul hier je voornaam in.";
+    allesCorrectIngevuld = false;
+  } else {
+    controleerVoorwaardenVoornaam();
+  }
+
+  if (achternaamTxt.length == 0) {
+    document.getElementById("achternaam").innerHTML =
+      "Vul hier je achternaam in.";
+    allesCorrectIngevuld = false;
+  } else {
+    controleerVoorwaardenAchternaam();
+  }
+
+  if (emailTxt.length == 0) {
+    document.getElementById("email_error").innerHTML =
+      "Vul hier uw e-mail adres in.";
+    allesCorrectIngevuld = false;
+  } else {
+    controleerVoorwaardenEmail();
+  }
+
+  if (emailHerhaalTxt.length == 0) {
+    document.getElementById("emailherhaal_error").innerHTML =
+      "Vul hier uw e-mail adres opnieuw in.";
+    allesCorrectIngevuld = false;
+  } else {
+    controleerVoorwaardenEmailHerhaal();
+  }
+
+  if (telTxt.length == 0) {
+    document.getElementById("telefoonnr_error").innerHTML =
+      "Vul hier telefoonnummer in a.u.b.";
+    allesCorrectIngevuld = false;
+  } else {
+    controleerVoorwaardenTelefoonnr();
+  }
+
+  if (straatnaamTxt.length == 0) {
+    document.getElementById("straat_error").innerHTML =
+      "Vul hier de naam van uw straat in.";
+    allesCorrectIngevuld = false;
+  } else {
+    controleerVoorwaardenStraatnaam();
+  }
+
+  if (straatnummerTxt.length == 0) {
+    document.getElementById("straatnummer_error").innerHTML =
+      "Vul hier uw straatnummer in.";
+    allesCorrectIngevuld = false;
+  } else {
+    controleerVoorwaardenStraatnummer();
+  }
+
+  if (postcodeTxt.length == 0) {
+    document.getElementById("postcode_error").innerHTML =
+      "Vul hier uw postcode in.";
+    allesCorrectIngevuld = false;
+  } else {
+    controleerVoorwaardenPostcode();
+  }
+
+  if (woonplaatsTxt.length == 0) {
+    document.getElementById("plaats_error").innerHTML =
+      "Vul hier uw woonplaats in.";
+    allesCorrectIngevuld = false;
+  } else {
+    controleerVoorwaardenWoonplaats();
+  }
+
+  if (landTxt.length == 0) {
+    document.getElementById("land_error").innerHTML = "Vul hier uw land in.";
+    allesCorrectIngevuld = false;
+  } else {
+    controleerVoorwaardenLand();
+  }
 }
 // send to mail
+if (allesCorrectIngevuld) {
+  let link =
+    "mailto:" +
+    encodeURIComponent("hello@twijngaardhof@testmail.be;") +
+    encodeURIComponent(document.getElementById("email").value) +
+    "&subject=" +
+    encodeURIComponent("Booking 't Wijngaardhof") +
+    "&body=" +
+    "Aankomst datum: " +
+    encodeURIComponent(aankomstDate) +
+    encodeURIComponent("\r\n\n") +
+    "Vertrek datum: " +
+    encodeURIComponent(vertrekDate) +
+    encodeURIComponent("\r\n\n") +
+    "Keuze logement: " +
+    encodeURIComponent(logementKeuze) +
+    encodeURIComponent("\r\n\n") +
+    "Aantal personen: " +
+    encodeURIComponent(aantalBezoekers) +
+    encodeURIComponent("\r\n\n") +
+    "voornaam: " +
+    encodeURIComponent(voornaamTxt) +
+    encodeURIComponent("\r\n\n") +
+    "achternaam: " +
+    encodeURIComponent(achternaamTxt) +
+    encodeURIComponent("\r\n\n") +
+    "email:" +
+    encodeURIComponent(emailTxt) +
+    encodeURIComponent("\r\n\n") +
+    "telefoonnummer: " +
+    encodeURIComponent(telTxt) +
+    encodeURIComponent("\r\n\n") +
+    "straat: " +
+    encodeURIComponent(straatnaamTxt) +
+    encodeURIComponent("\r\n\n") +
+    "adres gegevens:" +
+    encodeURIComponent(straatnaamTxt) +
+    encodeURIComponent(" ") +
+    encodeURIComponent(straatnummerTxt) +
+    encodeURIComponent(" ") +
+    encodeURIComponent(busTxt) +
+    encodeURIComponent("\r\n\n") +
+    encodeURIComponent(woonplaatsTxt) +
+    encodeURIComponent(" ") +
+    encodeURIComponent(postcodeTxt) +
+    encodeURIComponent(" ") +
+    encodeURIComponent(landTxt);
+  window.location.href = link;
+}
