@@ -60,11 +60,6 @@ h2 {
   font-size: 36px;
 }
 
-.brush {
-  background-image: url(images/titlebrush.svg);
-  background-repeat: no-repeat;
-}
-
 nav,
 footer {
   font-family: var(--ff-nav-400);
@@ -363,6 +358,12 @@ hr {
 .welkom p {
   margin: 25px 0;
 }
+
+.brush1 {
+  background-image: url(images/brushjosmaryse.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
 /* END WELKOMSBERICHT */
 
 /* START GASTENBOEK */
@@ -396,6 +397,14 @@ hr {
 /* END GASTENBOEK */
 
 /* START KAMERS */
+.brush2 {
+  background-image: url(images/brushcharmekamers.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 360px;
+  height: 80px;
+}
+
 .kamer-info {
   padding-left: 50px;
   width: 500px;
@@ -474,8 +483,40 @@ hr {
 }
 /* END KAMERS */
 
+/* START GALERIJ */
+.brush3 {
+  background-image: url(images/brushsfeerbeelden.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* END GALERIJ */
+
 /* START INFORMATIE */
-#fruitstreek img{
+.brush4 {
+  background-image: url(images/brushinfoauthentiekehoeve.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.brush5 {
+  background-image: url(images/brushinfohetontbijt.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.brush6 {
+  background-image: url(images/brushinfobezienswaardigheden.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.brush7 {
+  background-image: url(images/brushinforoutes-fietsverhuur.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#fruitstreek img {
   position: relative;
   z-index: -1;
 }
@@ -490,144 +531,150 @@ hr {
 }
 
 .fruitstreekinfo {
- width: 600px;
- height: 600px;
- margin-top: 50px;
- margin-bottom: 70px;
-}
-
-.fruitstreekinfo p{
-  padding-bottom: 10px;
- }
- 
- .drawning {
+  width: 600px;
+  height: 600px;
   margin-top: 50px;
   margin-bottom: 70px;
- }
-
- .ontbijtinfo {
-  width: 500px;
-  margin-bottom: 70px;
- }
-
- .ontbijtinfo p {
-  padding-bottom: 10px;
- }
-
- .ontbijtfotos {
-  width: 500px;
-  margin-bottom: 70px;
- }
-
- .kasteelheersinfo {
-  width: 500px;
- }
-
- .kasteelheersinfo p {
-  padding-bottom: 10px;
- }
-
- .kasteelheersinfo h2 {
-  padding-bottom: 30px;
- }
-
- .kasteelheksinfo {
-  width: 500px;
- }
-
- .kasteelheksinfo p {
-  padding-bottom: 10px;
- }
-
- .kasteelheksinfo h2 {
-  padding-bottom: 30px;
- }
-
- .kerkveuleninfo {
-  width: 500px;
- }
-
- .kerkveuleninfo p {
-  padding-bottom: 10px;
- }
-
- .kerkveuleninfo h2 {
-  padding-bottom: 30px;
- }
-
- .doorkijkkerkjeinfo {
-  width: 500px;
- }
-
- .doorkijkkerkjeinfo p {
-  padding-bottom: 10px;
- }
-
- .doorkijkkerkjeinfo h2 {
-  padding-bottom: 30px;
- }
-
- .doorkijkkerkje {
-  width: 500px;
- }
-
- .stroopfabriekinfo {
-  width: 500px;
- }
-
- .stroopfabriekinfo p {
-  padding-bottom: 10px;
- }
-
- .stroopfabriekinfo h2 {
-  padding-bottom: 30px;
- }
-
- .natuurinfo {
-  width: 500px;
-  padding-bottom: 70px;
- }
-
- .natuurinfo p {
-  padding-bottom: 10px;
- }
-
- .natuurinfo h2 {
-  padding-bottom: 30px;
- }
-
- #bezienswaardigheden section {
-  margin-bottom: 50px;
- }
-
- .fietsfotos img {
-  margin-bottom: 20px;
- }
-
- .fietsenenroutesinfo {
-  width: 500px;
-  padding-bottom: 70px;
- }
-
- .fietsenenroutesinfo p {
-  padding-bottom: 10px;
- }
-
- .fietsenenroutesinfo a {
-  text-decoration: none; 
-  color: var(--clr-gold);
- }
-
-.fietsenenroutesinfo a:hover {
-  text-decoration: underline; 
 }
 
- #routesenfietsverhuur {
+.fruitstreekinfo p {
+  padding-bottom: 10px;
+}
+
+.drawning {
+  margin-top: 50px;
   margin-bottom: 70px;
- }
+}
+
+.ontbijtinfo {
+  width: 500px;
+  margin-bottom: 70px;
+}
+
+.ontbijtinfo p {
+  padding-bottom: 10px;
+}
+
+.ontbijtfotos {
+  width: 500px;
+  margin-bottom: 70px;
+}
+
+.kasteelheersinfo {
+  width: 500px;
+}
+
+.kasteelheersinfo p {
+  padding-bottom: 10px;
+}
+
+.kasteelheersinfo h2 {
+  padding-bottom: 30px;
+}
+
+.kasteelheksinfo {
+  width: 500px;
+}
+
+.kasteelheksinfo p {
+  padding-bottom: 10px;
+}
+
+.kasteelheksinfo h2 {
+  padding-bottom: 30px;
+}
+
+.kerkveuleninfo {
+  width: 500px;
+}
+
+.kerkveuleninfo p {
+  padding-bottom: 10px;
+}
+
+.kerkveuleninfo h2 {
+  padding-bottom: 30px;
+}
+
+.doorkijkkerkjeinfo {
+  width: 500px;
+}
+
+.doorkijkkerkjeinfo p {
+  padding-bottom: 10px;
+}
+
+.doorkijkkerkjeinfo h2 {
+  padding-bottom: 30px;
+}
+
+.doorkijkkerkje {
+  width: 500px;
+}
+
+.stroopfabriekinfo {
+  width: 500px;
+}
+
+.stroopfabriekinfo p {
+  padding-bottom: 10px;
+}
+
+.stroopfabriekinfo h2 {
+  padding-bottom: 30px;
+}
+
+.natuurinfo {
+  width: 500px;
+  padding-bottom: 70px;
+}
+
+.natuurinfo p {
+  padding-bottom: 10px;
+}
+
+.natuurinfo h2 {
+  padding-bottom: 30px;
+}
+
+#bezienswaardigheden section {
+  margin-bottom: 50px;
+}
+
+.fietsfotos img {
+  margin-bottom: 20px;
+}
+
+.fietsenenroutesinfo {
+  width: 500px;
+  padding-bottom: 70px;
+}
+
+.fietsenenroutesinfo p {
+  padding-bottom: 10px;
+}
+
+.fietsenenroutesinfo a {
+  text-decoration: none;
+  color: var(--clr-gold);
+}
+
+.fietsenenroutesinfo a:hover {
+  text-decoration: underline;
+}
+
+#routesenfietsverhuur {
+  margin-bottom: 70px;
+}
 /* END INFORMATIE */
 
 /* START RESERVEREN*/
+.brush8 {
+  background-image: url(images/brushreserveer.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 form {
   margin-bottom: 70px;
 }
@@ -776,6 +823,12 @@ form a {
 /* END RESERVEREN */
 
 /* START CONTACT */
+.brush9 {
+  background-image: url(images/brushcontact.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .contactinfo h2 {
   margin-bottom: 30px;
   font-style: normal;
