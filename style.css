@@ -474,6 +474,159 @@ hr {
 }
 /* END KAMERS */
 
+/* START INFORMATIE */
+#fruitstreek img{
+  position: relative;
+  z-index: -1;
+}
+
+.poem {
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  font-family: var(--ff-h-400);
+  font-size: 36px;
+  color: var(--clr-white);
+}
+
+.fruitstreekinfo {
+ width: 600px;
+ height: 600px;
+ margin-top: 50px;
+ margin-bottom: 70px;
+}
+
+.fruitstreekinfo p{
+  padding-bottom: 10px;
+ }
+ 
+ .drawning {
+  margin-top: 50px;
+  margin-bottom: 70px;
+ }
+
+ .ontbijtinfo {
+  width: 500px;
+  margin-bottom: 70px;
+ }
+
+ .ontbijtinfo p {
+  padding-bottom: 10px;
+ }
+
+ .ontbijtfotos {
+  width: 500px;
+  margin-bottom: 70px;
+ }
+
+ .kasteelheersinfo {
+  width: 500px;
+ }
+
+ .kasteelheersinfo p {
+  padding-bottom: 10px;
+ }
+
+ .kasteelheersinfo h2 {
+  padding-bottom: 30px;
+ }
+
+ .kasteelheksinfo {
+  width: 500px;
+ }
+
+ .kasteelheksinfo p {
+  padding-bottom: 10px;
+ }
+
+ .kasteelheksinfo h2 {
+  padding-bottom: 30px;
+ }
+
+ .kerkveuleninfo {
+  width: 500px;
+ }
+
+ .kerkveuleninfo p {
+  padding-bottom: 10px;
+ }
+
+ .kerkveuleninfo h2 {
+  padding-bottom: 30px;
+ }
+
+ .doorkijkkerkjeinfo {
+  width: 500px;
+ }
+
+ .doorkijkkerkjeinfo p {
+  padding-bottom: 10px;
+ }
+
+ .doorkijkkerkjeinfo h2 {
+  padding-bottom: 30px;
+ }
+
+ .doorkijkkerkje {
+  width: 500px;
+ }
+
+ .stroopfabriekinfo {
+  width: 500px;
+ }
+
+ .stroopfabriekinfo p {
+  padding-bottom: 10px;
+ }
+
+ .stroopfabriekinfo h2 {
+  padding-bottom: 30px;
+ }
+
+ .natuurinfo {
+  width: 500px;
+  padding-bottom: 70px;
+ }
+
+ .natuurinfo p {
+  padding-bottom: 10px;
+ }
+
+ .natuurinfo h2 {
+  padding-bottom: 30px;
+ }
+
+ #bezienswaardigheden section {
+  margin-bottom: 50px;
+ }
+
+ .fietsfotos img {
+  margin-bottom: 20px;
+ }
+
+ .fietsenenroutesinfo {
+  width: 500px;
+  padding-bottom: 70px;
+ }
+
+ .fietsenenroutesinfo p {
+  padding-bottom: 10px;
+ }
+
+ .fietsenenroutesinfo a {
+  text-decoration: none; 
+  color: var(--clr-gold);
+ }
+
+.fietsenenroutesinfo a:hover {
+  text-decoration: underline; 
+}
+
+ #routesenfietsverhuur {
+  margin-bottom: 70px;
+ }
+/* END INFORMATIE */
+
 /* START RESERVEREN*/
 form {
   margin-bottom: 70px;

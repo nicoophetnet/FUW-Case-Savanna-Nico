@@ -62,18 +62,20 @@
     <div class="content flex container">
       <h1 class="hoofdtitel">Reserveer jouw kamer</h1>
 
-      <form method="get">
+      <form method="get" novalidate>
         <div class="keuze spacebtw">
           <div class="column spacebtw">
             <div class="spacebtw">
               <div class="column">
                 <label for="aankomst">Aankomst</label
-                ><input type="date" id="aankomst" required />
+                ><input type="date" id="aankomst" min="15-12-2022" required />
+                <span class="error" id="aankomst_error"></span>
               </div>
 
               <div class="column">
                 <label for="vertrek">Vertrek</label
-                ><input type="date" id="vertrek" required />
+                ><input type="date" id="vertrek" min="16-12-2022" required />
+                <span class="error" id="vertrek_error"></span>
               </div>
             </div>
 
@@ -93,6 +95,7 @@
                   Vakantiehuisje 't Wijnstokje
                 </option>
               </select>
+              <span class="error" id="logement_error"></span>
             </div>
 
             <div class="spacebtw">
@@ -103,7 +106,7 @@
                 min="1"
                 max="4"
                 required
-              />
+              /><span class="error" id="aantalbezoekers_error"></span>
             </div>
 
             <span class="flex end">Berekende prijs: €130,00</span>
@@ -118,17 +121,22 @@
             <div class="column spacebtw">
               <label for="voornaam">Voornaam</label
               ><input type="text" id="voornaam" required />
+              <span class="error" id="voornaam_error"></span>
               <label for="email">E-mailadres</label
               ><input type="email" id="email" required />
+              <span class="error" id="email_error"></span>
               <label for="telefoonnr">Telefoonnummer</label
               ><input type="tel" id="telefoonnr" required />
+              <span class="error" id="telefoonnr_error"></span>
             </div>
 
             <div class="column">
               <label for="achternaam">Achternaam</label
               ><input type="text" id="achternaam" required />
+              <span class="error" id="achternaam_error"></span>
               <label for="emailherhaal">Herhaal e-mailadres</label
               ><input type="email" id="emailherhaal" required />
+              <span class="error" id="emailherhaal_error"></span>
             </div>
           </div>
         </section>
@@ -143,11 +151,13 @@
                 <div class="column">
                   <label for="straat">Straatnaam</label>
                   <input type="text" id="straat" required />
+                  <span class="error" id="straat_error"></span>
                 </div>
 
                 <div class="column">
-                  <label for="nr">Nr</label>
-                  <input type="text" id="nr" required />
+                  <label for="straatnummer">Nr</label>
+                  <input type="text" id="straatnummer" required />
+                  <span class="error" id="straatnummer_error"></span>
                 </div>
 
                 <div class="column">
@@ -160,10 +170,12 @@
                 <div class="column">
                   <label for="postcode">Postcode</label>
                   <input type="text" id="postcode" required />
+                  <span class="error" id="postcode_error"></span>
                 </div>
                 <div class="column">
                   <label for="plaats">Woonplaats</label>
                   <input type="text" id="plaats" required />
+                  <span class="error" id="plaats_error"></span>
                 </div>
               </div>
 
@@ -171,6 +183,7 @@
                 <div class="column">
                   <label for="land">Land</label>
                   <input type="text" id="land" required />
+                  <span class="error" id="land_error"></span>
                 </div>
               </div>
             </div>
@@ -185,12 +198,18 @@
               >Ik heb het <a href="regelement.html">regelement</a> gelezen en ik
               ga akkoord met
               <a href="voorwaarden.html">de voorwaarden</a>.</label
-            >
+            ><span class="error" id="voorwaarden_error"></span>
           </div>
         </div>
 
         <div class="center">
-          <input type="submit" value="Reserveren!" class="button3" />
+          <input
+            type="submit"
+            value="Reserveren!"
+            class="button3"
+            id="verzendknop"
+            onclick="verstuur()"
+          />
         </div>
       </form>
     </div>
