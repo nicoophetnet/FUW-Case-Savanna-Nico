@@ -164,7 +164,9 @@ hr {
 /* START NAVIGATION */
 .menu a {
   color: var(--clr-white);
+  font-family: var(--ff-nav-400);
   text-decoration: none;
+  transition: color 0.5s;
 }
 
 .menu a:hover {
@@ -528,6 +530,10 @@ form a {
   text-align: center;
 }
 
+.contact {
+  margin-bottom: 70px;
+}
+
 .contactgegevens {
   margin-bottom: 70px;
 }
@@ -642,7 +648,9 @@ address span {
 
 .footer a {
   color: var(--clr-white);
+  font-family: var(--ff-nav-400);
   text-decoration: none;
+  transition: color 0.5s;
 }
 
 .footer a:hover {
