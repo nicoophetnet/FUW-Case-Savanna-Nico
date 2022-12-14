@@ -26,9 +26,11 @@ let allesCorrectIngevuld;
 
 // control functions
 
-function controleerAankomstDate() {
-  let today = new Date();
-  if (aankomstDate < today.getDate()) {
+function controleerVoorwaardenAankomstDate() {
+  let today = Date.parse(new Date());
+  let arrival = Date.parse(aankomstDate);
+
+  if (arrival < today) {
     document.getElementById("aankomst_error").innerHTML =
       "Kies een dag in de toekomst!";
     allesCorrectIngevuld = false;
@@ -37,8 +39,12 @@ function controleerAankomstDate() {
   }
 }
 
-function controleerVertrekDate() {
-  if (aankomstDate >= vertrekDate) {
+function controleerVoorwaardenVertrekDate() {
+  let arrival = Date.parse(aankomstDate);
+  let departure = Date.parse(vertrekDate);
+
+  if (arrival >= departure) {
+    console.log("juuuu");
     document.getElementById("vertrek_error").innerHTML =
       "Kies voor een latere dag!";
     allesCorrectIngevuld = false;
@@ -178,7 +184,7 @@ function verstuur() {
     document.getElementById("aankomst_error").innerHTML = "Maak een keuze...";
     allesCorrectIngevuld = false;
   } else {
-    document.getElementById("aankomst_error").innerHTML = "";
+    controleerVoorwaardenAankomstDate();
   }
 
   if (vertrekDate == 0) {
@@ -186,6 +192,7 @@ function verstuur() {
     allesCorrectIngevuld = false;
   } else {
     document.getElementById("vertrek_error").innerHTML = "";
+    controleerVoorwaardenVertrekDate();
   }
 
   if (logementKeuze == 0) {
@@ -290,56 +297,54 @@ function verstuur() {
     document.getElementById("voorwaarden_error").innerHTML = "";
   }
 
-    // send to mail
-    if (allesCorrectIngevuld) {
-      let link =
-        "mailto:" +
-        encodeURIComponent("hello@twijngaardhof@testmail.be;") +
-        encodeURIComponent(document.getElementById("email").value) +
-        "&subject=" +
-        encodeURIComponent("Booking 't Wijngaardhof") +
-        "&body=" +
-        "Aankomst datum: " +
-        encodeURIComponent(aankomstDate) +
-        encodeURIComponent("\r\n\n") +
-        "Vertrek datum: " +
-        encodeURIComponent(vertrekDate) +
-        encodeURIComponent("\r\n\n") +
-        "Keuze logement: " +
-        encodeURIComponent(logementKeuze) +
-        encodeURIComponent("\r\n\n") +
-        "Aantal personen: " +
-        encodeURIComponent(aantalBezoekers) +
-        encodeURIComponent("\r\n\n") +
-        "voornaam: " +
-        encodeURIComponent(voornaamTxt) +
-        encodeURIComponent("\r\n\n") +
-        "achternaam: " +
-        encodeURIComponent(achternaamTxt) +
-        encodeURIComponent("\r\n\n") +
-        "email:" +
-        encodeURIComponent(emailTxt) +
-        encodeURIComponent("\r\n\n") +
-        "telefoonnummer: " +
-        encodeURIComponent(telTxt) +
-        encodeURIComponent("\r\n\n") +
-        "straat: " +
-        encodeURIComponent(straatnaamTxt) +
-        encodeURIComponent("\r\n\n") +
-        "adres gegevens:" +
-        encodeURIComponent(straatnaamTxt) +
-        encodeURIComponent(" ") +
-        encodeURIComponent(straatnummerTxt) +
-        encodeURIComponent(" ") +
-        encodeURIComponent(busTxt) +
-        encodeURIComponent("\r\n\n") +
-        encodeURIComponent(woonplaatsTxt) +
-        encodeURIComponent(" ") +
-        encodeURIComponent(postcodeTxt) +
-        encodeURIComponent(" ") +
-        encodeURIComponent(landTxt);
-      window.location.href = link;
-    }
-
+  // send to mail
+  if (allesCorrectIngevuld) {
+    let link =
+      "mailto:" +
+      encodeURIComponent("hello@twijngaardhof@testmail.be;") +
+      encodeURIComponent(document.getElementById("email").value) +
+      "&subject=" +
+      encodeURIComponent("Booking 't Wijngaardhof") +
+      "&body=" +
+      "Aankomst datum: " +
+      encodeURIComponent(aankomstDate) +
+      encodeURIComponent("\r\n\n") +
+      "Vertrek datum: " +
+      encodeURIComponent(vertrekDate) +
+      encodeURIComponent("\r\n\n") +
+      "Keuze logement: " +
+      encodeURIComponent(logementKeuze) +
+      encodeURIComponent("\r\n\n") +
+      "Aantal personen: " +
+      encodeURIComponent(aantalBezoekers) +
+      encodeURIComponent("\r\n\n") +
+      "voornaam: " +
+      encodeURIComponent(voornaamTxt) +
+      encodeURIComponent("\r\n\n") +
+      "achternaam: " +
+      encodeURIComponent(achternaamTxt) +
+      encodeURIComponent("\r\n\n") +
+      "email:" +
+      encodeURIComponent(emailTxt) +
+      encodeURIComponent("\r\n\n") +
+      "telefoonnummer: " +
+      encodeURIComponent(telTxt) +
+      encodeURIComponent("\r\n\n") +
+      "straat: " +
+      encodeURIComponent(straatnaamTxt) +
+      encodeURIComponent("\r\n\n") +
+      "adres gegevens:" +
+      encodeURIComponent(straatnaamTxt) +
+      encodeURIComponent(" ") +
+      encodeURIComponent(straatnummerTxt) +
+      encodeURIComponent(" ") +
+      encodeURIComponent(busTxt) +
+      encodeURIComponent("\r\n\n") +
+      encodeURIComponent(woonplaatsTxt) +
+      encodeURIComponent(" ") +
+      encodeURIComponent(postcodeTxt) +
+      encodeURIComponent(" ") +
+      encodeURIComponent(landTxt);
+    window.location.href = link;
+  }
 }
-
