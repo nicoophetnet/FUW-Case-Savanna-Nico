@@ -314,6 +314,7 @@ function verstuur() {
     let link =
       "mailto:" +
       encodeURIComponent("hello@twijngaardhof@testmail.be;") +
+      "?cc=" +
       encodeURIComponent(document.getElementById("email").value) +
       "&subject=" +
       encodeURIComponent("Booking 't Wijngaardhof") +
