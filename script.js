@@ -317,7 +317,8 @@ function verstuur() {
       "?cc=" +
       encodeURIComponent(document.getElementById("email").value) +
       "&subject=" +
-      encodeURIComponent("Booking 't Wijngaardhof") +
+      encodeURIComponent("Booking 't Wijngaardhof ") +
+      encodeURIComponent(aankomstDate) +
       "&body=" +
       "Aankomst datum: " +
       encodeURIComponent(aankomstDate) +
@@ -344,6 +345,7 @@ function verstuur() {
       encodeURIComponent(telTxt) +
       encodeURIComponent("\r\n\n") +
       "Adres gegevens:" +
+      encodeURIComponent("\r\n\n") +
       encodeURIComponent(straatnaamTxt) +
       encodeURIComponent(" ") +
       encodeURIComponent(straatnummerTxt) +
