@@ -44,7 +44,6 @@ function controleerVoorwaardenVertrekDate() {
   let departure = Date.parse(vertrekDate);
 
   if (arrival >= departure) {
-    console.log("juuuu");
     document.getElementById("vertrek_error").innerHTML =
       "Kies voor een latere dag!";
     allesCorrectIngevuld = false;
@@ -54,9 +53,11 @@ function controleerVoorwaardenVertrekDate() {
 }
 
 function controleerVoorwaardenVoornaam() {
-  if (voornaamTxt.length < 2) {
+  let regEx = /^[A-ZÀ-ÿa-z']*[\s]*[A-ZÀ-ÿa-z'\s]*[a-z]$/gm;
+
+  if (regEx.test(voornaamTxt) == false) {
     document.getElementById("voornaam_error").innerHTML =
-      "Voornaam moet minstens 2 karakters lang zijn!";
+      "Gelieve een geldige voornaam op te geven. Minstens 2 letters en geen cijfers of vreemde tekens!";
     allesCorrectIngevuld = false;
   } else {
     document.getElementById("voornaam_error").innerHTML = "";
@@ -64,9 +65,11 @@ function controleerVoorwaardenVoornaam() {
 }
 
 function controleerVoorwaardenAchternaam() {
-  if (voornaamTxt.length < 2) {
+  let regEx = /^[A-ZÀ-ÿa-z']*[\s]*[A-ZÀ-ÿa-z'\s]*[a-z]$/gm;
+
+  if (regEx.test(achternaamTxt) == false) {
     document.getElementById("achternaam_error").innerHTML =
-      "Achternaam moet minstens 2 karakters lang zijn!";
+      "Gelieve een geldige achternaam op te geven. Minstens 2 letters en geen cijfers of vreemde tekens!";
     allesCorrectIngevuld = false;
   } else {
     document.getElementById("achternaam_error").innerHTML = "";
@@ -74,7 +77,8 @@ function controleerVoorwaardenAchternaam() {
 }
 
 function controleerVoorwaardenEmail() {
-  let regEx = /^[A-Za-z][\.A-Za-z0-9+_-]+@[\.A-Za-z0-9-]+\.[A-Za-z]{2,20}$/;
+  let regEx = /^[A-Za-z][\.A-Za-z0-9+_-]+@[\.A-Za-z0-9-]+\.[A-Za-z]{2,20}$/gm;
+
   if (regEx.test(emailTxt) == false) {
     document.getElementById("email_error").innerHTML =
       "Gelieve een correct e-mailadres invullen!";
@@ -97,6 +101,7 @@ function controleerVoorwaardenEmailHerhaal() {
 function controleerVoorwaardenTelefoonnr() {
   let regEx =
     /^[\+]?[\s]?[0-9]{2}[\s]?[0-9]{1,3}[\/]?[\s]?[0-9]{2,3}[\s]?[0-9]{1,3}[\s]?[0-9]{1,3}[\s]?[0-9]{1,3}$/;
+
   if (regEx.test(telTxt) == false) {
     document.getElementById("telefoonnr_error").innerHTML =
       "Gelieve een correct telefoonnummer invullen!";
@@ -107,9 +112,11 @@ function controleerVoorwaardenTelefoonnr() {
 }
 
 function controleerVoorwaardenStraatnaam() {
-  if (straatnaamTxt.length < 2) {
+  let regEx = /^[a-zÀ-ÿA-Z\s\-]{2,45}$/gm;
+
+  if (regEx.test(straatnaamTxt) == false) {
     document.getElementById("straat_error").innerHTML =
-      "Straatnaam moet minstens 2 karakters lang zijn!";
+      "Gelieve een geldige straat op te geven. Minstens 2 letters en geen cijfers of vreemde tekens!";
     allesCorrectIngevuld = false;
   } else {
     document.getElementById("straat_error").innerHTML = "";
@@ -137,9 +144,11 @@ function controleerVoorwaardenPostcode() {
 }
 
 function controleerVoorwaardenWoonplaats() {
-  if (woonplaatsTxt.length < 2) {
+  let regEx = /^[a-zÀ-ÿA-Z\s]{2,45}$/gm;
+
+  if (regEx.test(woonplaatsTxt) == false) {
     document.getElementById("plaats_error").innerHTML =
-      "Woonplaats moet minstens 2 karakters lang zijn!";
+      "Gelieve een geldige woonplaats op te geven. Minstens 2 letters en geen cijfers of vreemde tekens!";
     allesCorrectIngevuld = false;
   } else {
     document.getElementById("plaats_error").innerHTML = "";
@@ -147,9 +156,11 @@ function controleerVoorwaardenWoonplaats() {
 }
 
 function controleerVoorwaardenLand() {
-  if (landTxt.length < 2) {
+  let regEx = /^[a-zÀ-ÿA-Z\s]{2,45}$/gm;
+
+  if (regEx.test(landTxt) == false) {
     document.getElementById("land_error").innerHTML =
-      "Land moet minstens 2 karakters lang zijn!";
+      "Gelieve een geldig land op te geven. Minstens 2 letters en geen cijfers of vreemde tekens!";
     allesCorrectIngevuld = false;
   } else {
     document.getElementById("land_error").innerHTML = "";
@@ -212,7 +223,7 @@ function verstuur() {
 
   if (voornaamTxt.length == 0) {
     document.getElementById("voornaam_error").innerHTML =
-      "Vul hier je voornaam in.";
+      "Vul hier uw voornaam in.";
     allesCorrectIngevuld = false;
   } else {
     controleerVoorwaardenVoornaam();
@@ -220,7 +231,7 @@ function verstuur() {
 
   if (achternaamTxt.length == 0) {
     document.getElementById("achternaam_error").innerHTML =
-      "Vul hier je achternaam in.";
+      "Vul hier uw achternaam in.";
     allesCorrectIngevuld = false;
   } else {
     controleerVoorwaardenAchternaam();
@@ -244,7 +255,7 @@ function verstuur() {
 
   if (telTxt.length == 0) {
     document.getElementById("telefoonnr_error").innerHTML =
-      "Vul hier telefoonnummer in a.u.b.";
+      "Vul hier uw telefoonnummer in.";
     allesCorrectIngevuld = false;
   } else {
     controleerVoorwaardenTelefoonnr();
@@ -283,7 +294,8 @@ function verstuur() {
   }
 
   if (landTxt.length == 0) {
-    document.getElementById("land_error").innerHTML = "Vul hier uw land in.";
+    document.getElementById("land_error").innerHTML =
+      "Vul hier de naam van uw land in.";
     allesCorrectIngevuld = false;
   } else {
     controleerVoorwaardenLand();
@@ -291,7 +303,7 @@ function verstuur() {
 
   if (voorwaarden.checked == false) {
     document.getElementById("voorwaarden_error").innerHTML =
-      "U bent verplicht akkoord te gaan met de voorwaarden.";
+      "U bent verplicht het regelement en de voorwaarden te lezen en akkoord te gaan.";
     allesCorrectIngevuld = false;
   } else {
     document.getElementById("voorwaarden_error").innerHTML = "";
