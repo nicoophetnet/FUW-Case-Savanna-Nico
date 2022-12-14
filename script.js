@@ -52,6 +52,18 @@ function controleerVoorwaardenVertrekDate() {
   }
 }
 
+function controleerVoorwaardenAantalBezoekers() {
+  let regEx = /^[1-4]/gm;
+
+  if (regEx.test(aantalBezoekers) == false) {
+    document.getElementById("aantalbezoekers_error").innerHTML =
+      "Minstens 1 en maximaal 4 bezoekers!";
+    allesCorrectIngevuld = false;
+  } else {
+    document.getElementById("aantalbezoekers_error").innerHTML = "";
+  }
+}
+
 function controleerVoorwaardenVoornaam() {
   let regEx = /^[A-ZÀ-ÿa-z']*[\s]*[A-ZÀ-ÿa-z'\s]*[a-z]$/gm;
 
@@ -202,7 +214,6 @@ function verstuur() {
     document.getElementById("vertrek_error").innerHTML = "Maak een keuze...";
     allesCorrectIngevuld = false;
   } else {
-    document.getElementById("vertrek_error").innerHTML = "";
     controleerVoorwaardenVertrekDate();
   }
 
@@ -218,7 +229,7 @@ function verstuur() {
       "Gelieve het aantal bezoekers aan te geven.";
     allesCorrectIngevuld = false;
   } else {
-    document.getElementById("aantalbezoekers_error").innerHTML = "";
+    controleerVoorwaardenAantalBezoekers();
   }
 
   if (voornaamTxt.length == 0) {
