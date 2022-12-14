@@ -313,7 +313,7 @@ function verstuur() {
   if (allesCorrectIngevuld) {
     let link =
       "mailto:" +
-      encodeURIComponent("hello@twijngaardhof@testmail.be;") +
+      encodeURIComponent("twijngaardhof@testmail.be;") +
       "?cc=" +
       encodeURIComponent(document.getElementById("email").value) +
       "&subject=" +
@@ -331,22 +331,19 @@ function verstuur() {
       "Aantal personen: " +
       encodeURIComponent(aantalBezoekers) +
       encodeURIComponent("\r\n\n") +
-      "voornaam: " +
+      "Voornaam: " +
       encodeURIComponent(voornaamTxt) +
       encodeURIComponent("\r\n\n") +
-      "achternaam: " +
+      "Achternaam: " +
       encodeURIComponent(achternaamTxt) +
       encodeURIComponent("\r\n\n") +
-      "email:" +
+      "E-mail: " +
       encodeURIComponent(emailTxt) +
       encodeURIComponent("\r\n\n") +
-      "telefoonnummer: " +
+      "Telefoonnummer: " +
       encodeURIComponent(telTxt) +
       encodeURIComponent("\r\n\n") +
-      "straat: " +
-      encodeURIComponent(straatnaamTxt) +
-      encodeURIComponent("\r\n\n") +
-      "adres gegevens:" +
+      "Adres gegevens:" +
       encodeURIComponent(straatnaamTxt) +
       encodeURIComponent(" ") +
       encodeURIComponent(straatnummerTxt) +
@@ -356,7 +353,7 @@ function verstuur() {
       encodeURIComponent(woonplaatsTxt) +
       encodeURIComponent(" ") +
       encodeURIComponent(postcodeTxt) +
-      encodeURIComponent(" ") +
+      encodeURIComponent("\r\n\n") +
       encodeURIComponent(landTxt);
     window.location.href = link;
   }
