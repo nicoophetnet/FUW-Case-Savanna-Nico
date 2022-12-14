@@ -1,36 +1,4 @@
 "use strict";
-// Select the container element that holds the images
-const container = document.querySelector(".slider-container");
-
-// Select all of the images inside the container
-const images = container.querySelectorAll(".slider-image");
-
-// Get the width of the container element
-const containerWidth = container.offsetWidth;
-
-// Keep track of the current image
-let currentImage = 0;
-
-// Set the initial position of the images
-images.forEach((image, index) => {
-  // Set the initial position of each image to the right of the container
-  image.style.left = `${containerWidth * (index + 1)}px`;
-});
-
-// Select the next button
-const nextButton = document.querySelector("#next-button");
-
-// Add a click event listener to the next button
-nextButton.addEventListener("click", () => {
-  // Slide the current image out of view
-  images[currentImage].style.left = `-${containerWidth}px`;
-
-  // Increment the current image index
-  currentImage = (currentImage + 1) % images.length;
-
-  // Slide the next image into view
-  images[currentImage].style.left = "0";
-});
 
 // global variables
 
@@ -52,7 +20,9 @@ let postcodeTxt;
 let woonplaatsTxt;
 let landTxt;
 
-let allesCorrectIngevuld = true;
+let voorwaarden;
+
+let allesCorrectIngevuld;
 
 // control functions
 
@@ -132,11 +102,11 @@ function controleerVoorwaardenTelefoonnr() {
 
 function controleerVoorwaardenStraatnaam() {
   if (straatnaamTxt.length < 2) {
-    document.getElementById("straatnaam_error").innerHTML =
+    document.getElementById("straat_error").innerHTML =
       "Straatnaam moet minstens 2 karakters lang zijn!";
     allesCorrectIngevuld = false;
   } else {
-    document.getElementById("straatnaam_error").innerHTML = "";
+    document.getElementById("straat_error").innerHTML = "";
   }
 }
 
@@ -181,33 +151,56 @@ function controleerVoorwaardenLand() {
 }
 
 // send function
-
 function verstuur() {
   aankomstDate = document.getElementById("aankomst").value;
   vertrekDate = document.getElementById("vertrek").value;
   logementKeuze = document.getElementById("logement").value;
-  aantalBezoekers = document.getElementById("achternaam").value;
+  aantalBezoekers = document.getElementById("aantalbezoekers").value;
 
   voornaamTxt = document.getElementById("voornaam").value;
-  achternaamTxt = document.getElementById("aantalbezoekers").value;
+  achternaamTxt = document.getElementById("achternaam").value;
   emailTxt = document.getElementById("email").value;
   emailHerhaalTxt = document.getElementById("emailherhaal").value;
   telTxt = document.getElementById("telefoonnr").value;
 
-  straatnaamTxt = document.getElementById("straatnaam").value;
+  straatnaamTxt = document.getElementById("straat").value;
   straatnummerTxt = document.getElementById("straatnummer").value;
   busTxt = document.getElementById("bus").value;
   postcodeTxt = document.getElementById("postcode").value;
   woonplaatsTxt = document.getElementById("plaats").value;
   landTxt = document.getElementById("land").value;
 
-  let allesCorrectIngevuld = true;
+  voorwaarden = document.getElementById("voorwaarden");
+
+  allesCorrectIngevuld = true;
+
+  if (aankomstDate == 0) {
+    document.getElementById("aankomst_error").innerHTML = "Maak een keuze...";
+    allesCorrectIngevuld = false;
+  } else {
+    document.getElementById("aankomst_error").innerHTML = "";
+  }
+
+  if (vertrekDate == 0) {
+    document.getElementById("vertrek_error").innerHTML = "Maak een keuze...";
+    allesCorrectIngevuld = false;
+  } else {
+    document.getElementById("vertrek_error").innerHTML = "";
+  }
 
   if (logementKeuze == 0) {
     document.getElementById("logement_error").innerHTML = "Maak een keuze...";
     allesCorrectIngevuld = false;
   } else {
     document.getElementById("logement_error").innerHTML = "";
+  }
+
+  if (aantalBezoekers == 0) {
+    document.getElementById("aantalbezoekers_error").innerHTML =
+      "Gelieve het aantal bezoekers aan te geven.";
+    allesCorrectIngevuld = false;
+  } else {
+    document.getElementById("aantalbezoekers_error").innerHTML = "";
   }
 
   if (voornaamTxt.length == 0) {
@@ -219,7 +212,7 @@ function verstuur() {
   }
 
   if (achternaamTxt.length == 0) {
-    document.getElementById("achternaam").innerHTML =
+    document.getElementById("achternaam_error").innerHTML =
       "Vul hier je achternaam in.";
     allesCorrectIngevuld = false;
   } else {
@@ -288,54 +281,65 @@ function verstuur() {
   } else {
     controleerVoorwaardenLand();
   }
+
+  if (voorwaarden.checked == false) {
+    document.getElementById("voorwaarden_error").innerHTML =
+      "U bent verplicht akkoord te gaan met de voorwaarden.";
+    allesCorrectIngevuld = false;
+  } else {
+    document.getElementById("voorwaarden_error").innerHTML = "";
+  }
+
+    // send to mail
+    if (allesCorrectIngevuld) {
+      let link =
+        "mailto:" +
+        encodeURIComponent("hello@twijngaardhof@testmail.be;") +
+        encodeURIComponent(document.getElementById("email").value) +
+        "&subject=" +
+        encodeURIComponent("Booking 't Wijngaardhof") +
+        "&body=" +
+        "Aankomst datum: " +
+        encodeURIComponent(aankomstDate) +
+        encodeURIComponent("\r\n\n") +
+        "Vertrek datum: " +
+        encodeURIComponent(vertrekDate) +
+        encodeURIComponent("\r\n\n") +
+        "Keuze logement: " +
+        encodeURIComponent(logementKeuze) +
+        encodeURIComponent("\r\n\n") +
+        "Aantal personen: " +
+        encodeURIComponent(aantalBezoekers) +
+        encodeURIComponent("\r\n\n") +
+        "voornaam: " +
+        encodeURIComponent(voornaamTxt) +
+        encodeURIComponent("\r\n\n") +
+        "achternaam: " +
+        encodeURIComponent(achternaamTxt) +
+        encodeURIComponent("\r\n\n") +
+        "email:" +
+        encodeURIComponent(emailTxt) +
+        encodeURIComponent("\r\n\n") +
+        "telefoonnummer: " +
+        encodeURIComponent(telTxt) +
+        encodeURIComponent("\r\n\n") +
+        "straat: " +
+        encodeURIComponent(straatnaamTxt) +
+        encodeURIComponent("\r\n\n") +
+        "adres gegevens:" +
+        encodeURIComponent(straatnaamTxt) +
+        encodeURIComponent(" ") +
+        encodeURIComponent(straatnummerTxt) +
+        encodeURIComponent(" ") +
+        encodeURIComponent(busTxt) +
+        encodeURIComponent("\r\n\n") +
+        encodeURIComponent(woonplaatsTxt) +
+        encodeURIComponent(" ") +
+        encodeURIComponent(postcodeTxt) +
+        encodeURIComponent(" ") +
+        encodeURIComponent(landTxt);
+      window.location.href = link;
+    }
+
 }
-// send to mail
-if (allesCorrectIngevuld) {
-  let link =
-    "mailto:" +
-    encodeURIComponent("hello@twijngaardhof@testmail.be;") +
-    encodeURIComponent(document.getElementById("email").value) +
-    "&subject=" +
-    encodeURIComponent("Booking 't Wijngaardhof") +
-    "&body=" +
-    "Aankomst datum: " +
-    encodeURIComponent(aankomstDate) +
-    encodeURIComponent("\r\n\n") +
-    "Vertrek datum: " +
-    encodeURIComponent(vertrekDate) +
-    encodeURIComponent("\r\n\n") +
-    "Keuze logement: " +
-    encodeURIComponent(logementKeuze) +
-    encodeURIComponent("\r\n\n") +
-    "Aantal personen: " +
-    encodeURIComponent(aantalBezoekers) +
-    encodeURIComponent("\r\n\n") +
-    "voornaam: " +
-    encodeURIComponent(voornaamTxt) +
-    encodeURIComponent("\r\n\n") +
-    "achternaam: " +
-    encodeURIComponent(achternaamTxt) +
-    encodeURIComponent("\r\n\n") +
-    "email:" +
-    encodeURIComponent(emailTxt) +
-    encodeURIComponent("\r\n\n") +
-    "telefoonnummer: " +
-    encodeURIComponent(telTxt) +
-    encodeURIComponent("\r\n\n") +
-    "straat: " +
-    encodeURIComponent(straatnaamTxt) +
-    encodeURIComponent("\r\n\n") +
-    "adres gegevens:" +
-    encodeURIComponent(straatnaamTxt) +
-    encodeURIComponent(" ") +
-    encodeURIComponent(straatnummerTxt) +
-    encodeURIComponent(" ") +
-    encodeURIComponent(busTxt) +
-    encodeURIComponent("\r\n\n") +
-    encodeURIComponent(woonplaatsTxt) +
-    encodeURIComponent(" ") +
-    encodeURIComponent(postcodeTxt) +
-    encodeURIComponent(" ") +
-    encodeURIComponent(landTxt);
-  window.location.href = link;
-}
+
