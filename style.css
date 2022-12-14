@@ -238,6 +238,10 @@ hr {
   clear: both;
   width: 100%;
 }
+
+.active {
+  color: var(--clr-gold);
+}
 /* END NAVIGATION */
 
 /* START HOMEPAGE */
@@ -975,3 +979,14 @@ address span {
   padding-left: 10px;
 }
 /* END FOOTER */
+
+/* START SCROLL MARGIN (STICKY HEADER) */
+#kamerlavendel,
+#vakantiehuisjetwijnstokje,
+#fruistreek,
+#ontbijt,
+#bezienswaardigheden,
+#routesenfietsverhuur {
+  scroll-margin-top: 100px;
+}
+/* END SCROLL MARGIN (STICKY HEADER) */
