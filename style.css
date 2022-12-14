@@ -201,6 +201,10 @@ hr {
   color: var(--clr-gold);
 }
 
+.menu-item a:active {
+  color: var(--clr-gold);
+}
+
 .dropdown {
   visibility: hidden;
   opacity: 0;
@@ -236,6 +240,8 @@ hr {
 }
 /* END NAVIGATION */
 
+/* START HOMEPAGE */
+
 /* START BANNER */
 .fotobanner {
   background-image: url(images/fotobanner.jpg);
@@ -245,15 +251,24 @@ hr {
   height: 500px;
 }
 
-.fotobanner span {
+.big {
   font-family: var(--ff-h-400);
   font-size: 100px;
   color: var(--clr-white);
   display: block;
-  text-align: center;
   margin: 0;
   z-index: 1;
-  line-height: 100px;
+  line-height: 80px;
+}
+
+.small {
+  font-family: var(--ff-h-400);
+  font-size: 60px;
+  color: var(--clr-white);
+  display: block;
+  margin: 0;
+  z-index: 1;
+  line-height: 80px;
 }
 
 .overlaywrap {
@@ -338,25 +353,17 @@ hr {
   width: 600px;
   text-align: center;
 }
-
-.slick-prev slick-arrow {
-}
-
-.slick-next slick-arrow {
-}
 /* END INFOBANNER */
 
 /* START WELKOMSBERICHT */
 .welkom {
+  margin-top: 50px;
   margin-bottom: 50px;
 }
 
-.welkom img {
-  margin-right: 50px;
-}
-
 .welkom p {
-  margin: 25px 0;
+  width: 650px;
+  margin-top: 20px;
 }
 
 .brush1 {
@@ -394,7 +401,15 @@ hr {
 .gastenboekwrap {
   margin-bottom: 50px;
 }
+
+.slick-prev slick-arrow {
+}
+
+.slick-next slick-arrow {
+}
 /* END GASTENBOEK */
+
+/* END HOMEPAGE */
 
 /* START KAMERS */
 .brush2 {
@@ -439,8 +454,16 @@ hr {
   font-size: 13px;
 }
 
-.kamer {
-  margin: 50px 0;
+#kamertijm {
+  margin-bottom: 50px;
+}
+
+#kamerlavendel {
+  margin-bottom: 50px;
+}
+
+#vakantiehuisjetwijnstokje {
+  margin-bottom: 70px;
 }
 
 .kamer h2 {
@@ -488,6 +511,44 @@ hr {
   background-image: url(images/brushsfeerbeelden.svg);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.image-slider {
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+.slider-container {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.slider-image {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: left 0.5s ease-in-out;
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#prev-button {
+  left: 0;
+}
+
+#next-button {
+  right: 0;
 }
 /* END GALERIJ */
 
@@ -557,6 +618,7 @@ hr {
 
 .ontbijtfotos {
   width: 500px;
+  height: 422px;
   margin-bottom: 70px;
 }
 
@@ -854,6 +916,43 @@ address span {
   color: var(--clr-gold);
 }
 /* END CONTACT */
+
+/* START REGELEMENT */
+.regelement h1 {
+  text-align: left;
+}
+
+.regelement p {
+  text-align: left;
+}
+
+.regelement ul {
+  text-align: left;
+  list-style: decimal;
+  line-height: 25px;
+  margin-top: 30px;
+  margin-bottom: 70px;
+}
+/* END REGELEMENT */
+
+/* START VOORWAARDEN */
+.voorwaarden {
+  margin-bottom: 70px;
+}
+
+.voorwaarden h1 {
+  text-align: left;
+}
+
+.voorwaarden h2 {
+  text-align: left;
+}
+
+.voorwaarden p {
+  text-align: left;
+  margin-bottom: 30px;
+}
+/* END VOORWAARDEN */
 
 /* START FOOTER*/
 .footer {

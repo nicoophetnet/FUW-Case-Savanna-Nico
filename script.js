@@ -1,4 +1,36 @@
 "use strict";
+// Select the container element that holds the images
+const container = document.querySelector(".slider-container");
+
+// Select all of the images inside the container
+const images = container.querySelectorAll(".slider-image");
+
+// Get the width of the container element
+const containerWidth = container.offsetWidth;
+
+// Keep track of the current image
+let currentImage = 0;
+
+// Set the initial position of the images
+images.forEach((image, index) => {
+  // Set the initial position of each image to the right of the container
+  image.style.left = `${containerWidth * (index + 1)}px`;
+});
+
+// Select the next button
+const nextButton = document.querySelector("#next-button");
+
+// Add a click event listener to the next button
+nextButton.addEventListener("click", () => {
+  // Slide the current image out of view
+  images[currentImage].style.left = `-${containerWidth}px`;
+
+  // Increment the current image index
+  currentImage = (currentImage + 1) % images.length;
+
+  // Slide the next image into view
+  images[currentImage].style.left = "0";
+});
 
 // global variables
 
