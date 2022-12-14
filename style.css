@@ -29,6 +29,11 @@ body {
   color: var(--clr-dark-blue);
 }
 
+::selection {
+  color: var(--clr-white);
+  background-color: var(--clr-gold);
+}
+
 .hoofdtitel {
   padding-top: 70px;
   padding-bottom: 50px;
@@ -506,45 +511,150 @@ hr {
   background-position: center;
 }
 
-.image-slider {
-  width: 300px;
-  height: 300px;
-  position: relative;
+.galerijsubtitel {
+  margin-bottom: 50px;
 }
 
-.slider-container {
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
+.accordion {
+  width: 1100px;
+  height: 500px;
+  margin-bottom: 70px;
 }
 
-.slider-image {
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: left 0.5s ease-in-out;
+.item {
+  flex: 1;
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  transition: flex 0.8s ease;
 }
 
-.slider-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+.item:hover {
+  flex: 8;
 }
 
-#prev-button {
-  left: 0;
+.vkh-1 {
+  background-image: url("images/vierkantshoevepoortzomer.jpg");
 }
 
-#next-button {
-  right: 0;
+.vkh-2 {
+  background-image: url("images/vierkantshoevepoortwinter.jpg");
 }
+
+.vkh-3 {
+  background-image: url("images/vierkantshoevestal.jpg");
+}
+
+.vkh-4 {
+  background-image: url("images/vierkantshoeveterras1.jpg");
+}
+
+.vkh-5 {
+  background-image: url("images/vierkantshoeveterras2.jpg");
+}
+
+.vkh-6 {
+  background-image: url("images/vierkantshoevebuiten1.jpg");
+}
+
+.vkh-7 {
+  background-image: url("images/vierkantshoevebuiten2.jpg");
+}
+
+.vkh-8 {
+  background-image: url("images/vierkantshoevebuiten3.jpg");
+}
+
+.vkh-9 {
+  background-image: url("images/deboomhut.jpg");
+}
+
+.vkh-10 {
+  background-image: url("images/deboomhutbinnen.jpg");
+}
+
+.omg-1 {
+  background-image: url("images/veldhooibalen.jpg");
+}
+
+.omg-2 {
+  background-image: url("images/bloemenveld.jpg");
+}
+
+.omg-3 {
+  background-image: url("images/natuurhaspengouw.jpg");
+}
+
+.omg-4 {
+  background-image: url("images/heersweg.jpg");
+}
+
+.omg-5 {
+  background-image: url("images/winterbosweg.jpg");
+}
+
+.omg-6 {
+  background-image: url("images/winterveldweg.jpg");
+}
+
+.omg-7 {
+  background-image: url("images/Weggetje.jpg");
+}
+
+.omg-8 {
+  background-image: url("images/Klaprozen.jpg");
+}
+
+.omg-9 {
+  background-image: url("images/bloesemboom.jpg");
+}
+
+.omg-10 {
+  background-image: url("images/readingbetweenthelines.jpg");
+}
+
+.wnf-1 {
+  background-image: url("images/fietsen1.jpg");
+}
+
+.wnf-2 {
+  background-image: url("images/fietsen2.jpg");
+}
+
+.wnf-3 {
+  background-image: url("images/fietsen3.jpg");
+}
+
+.wnf-4 {
+  background-image: url("images/fietsen4.jpg");
+}
+
+.wnf-5 {
+  background-image: url("images/fietsen5.jpg");
+}
+
+.wnf-6 {
+  background-image: url("images/fietsen6.jpg");
+}
+
+.wnf-7 {
+  background-image: url("images/wandelen1.jpg");
+}
+
+.wnf-8 {
+  background-image: url("images/wandelen2.jpg");
+}
+
+.wnf-9 {
+  background-image: url("images/weg1.jpg");
+}
+
+.wnf-10 {
+  background-image: url("images/weg2.jpg");
+}
+
 /* END GALERIJ */
-
 /* START INFORMATIE */
 .brush4 {
   background-image: url(images/brushinfoauthentiekehoeve.svg);
@@ -730,6 +840,14 @@ hr {
   background-position: center;
 }
 
+.error {
+  color: darkred;
+  text-align: right;
+  font-size: 14px;
+  font-style: italic;
+  padding: 10px 0;
+}
+
 form {
   margin-bottom: 70px;
 }
@@ -738,7 +856,6 @@ form label {
   font-family: var(--ff-p-400);
   font-size: 16px;
   color: var(--clr-dark-blue);
-  margin-top: 10px;
   margin-bottom: 10px;
 }
 
@@ -747,8 +864,12 @@ form select {
   font-size: 16px;
   color: var(--clr-dark-blue);
   background-color: #dfdfdf;
-  border: 1px solid #dfdfdf;
-  height: 30px;
+  border: none;
+  padding: 8px;
+}
+
+form select option:hover {
+  background-color: #80a7bf;
 }
 
 form input {
@@ -758,13 +879,11 @@ form input {
   background-color: #dfdfdf;
   border: 1px solid #dfdfdf;
   height: 30px;
+  margin-bottom: 10px;
 }
 
-form span {
-  font-family: var(--ff-p-400);
-  font-size: 16px;
-  color: var(--clr-dark-blue);
-  font-style: italic;
+:focus-visible {
+  outline: 2px solid var(--clr-gold);
 }
 
 form a {
@@ -777,76 +896,53 @@ form a {
 
 .keuze select {
   margin-left: 50px;
-  margin-bottom: 30px;
 }
 
 .keuze input {
-  width: 120px;
+  padding: 4px 8px;
 }
 
 .keuze span {
-  margin-top: 30px;
+  padding-top: 15px;
 }
 
-#aantalbezoekers {
-  width: 60px;
-  text-align: center;
+.marginright {
+  margin-right: 10px;
 }
 
-.contact {
+.contactgegevens,
+.keuze {
   margin-bottom: 70px;
-}
-
-.contactgegevens {
-  margin-bottom: 70px;
-}
-
-.contactgegevens h2 {
-  margin-top: 50px;
-  margin-bottom: 30px;
-}
-
-.contactgegevens input {
-  width: 400px;
+  width: 800px;
 }
 
 .adresgegevens {
   margin-bottom: 70px;
+  width: 500px;
 }
 
-.adresgegevens h2 {
-  margin-top: 50px;
-  margin-bottom: 30px;
-}
-
-.adresgegevens input {
-  margin-left: 20px;
-  width: 400px;
-}
-
-.adresgegevens label {
-  margin-left: 20px;
-}
-
-#nr {
-  width: 80px;
-}
-
-#bus {
-  width: 60px;
-}
-
-#postcode {
-  width: 160px;
-}
-
-#plaats {
-  width: 400px;
-}
-
+.contactgegevens h2,
+.adresgegevens h2,
 .gelezen {
   margin-top: 50px;
   margin-bottom: 30px;
+}
+
+.contactgegevens input,
+.adresgegevens input {
+  width: 350px;
+}
+
+.nrbus input {
+  width: 100px;
+}
+
+.post input {
+  width: 150px;
+}
+
+.wnplts input {
+  width: 250px;
 }
 
 .gelezen label {
@@ -908,6 +1004,11 @@ address span {
   font-size: 18px;
   color: var(--clr-gold);
 }
+
+.contact {
+  margin-bottom: 70px;
+}
+
 /* END CONTACT */
 
 /* START REGELEMENT */

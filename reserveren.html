@@ -65,116 +65,130 @@
       </div>
 
       <form novalidate>
-        <div class="keuze spacebtw">
-          <div class="column spacebtw">
-            <div class="spacebtw">
-              <div class="column">
-                <label for="aankomst">Aankomst</label
-                ><input type="date" id="aankomst" min="15-12-2022" required />
-                <span class="error" id="aankomst_error"></span>
+        <div class="center">
+          <div class="keuze spacebtw">
+            <div class="column spacebtw">
+              <div class="spacebtw">
+                <div class="column marginright">
+                  <label for="aankomst">Aankomst</label
+                  ><input type="date" id="aankomst" min="15-12-2022" required />
+                  <span class="error" id="aankomst_error"></span>
+                </div>
+
+                <div class="column">
+                  <label for="vertrek">Vertrek</label
+                  ><input type="date" id="vertrek" min="16-12-2022" required />
+                  <span class="error" id="vertrek_error"></span>
+                </div>
               </div>
 
-              <div class="column">
-                <label for="vertrek">Vertrek</label
-                ><input type="date" id="vertrek" min="16-12-2022" required />
-                <span class="error" id="vertrek_error"></span>
+              <span class="flex start"
+                >Inchecken is mogelijk tussen 10:00 en 15:00</span
+              >
+            </div>
+
+            <div class="column spacebtw">
+              <div class="spacebtw">
+                <label for="logement">Keuze logement</label>
+                <div class="column spaceeven">
+                  <select id="logement" required>
+                    <option value="">Maak een keuze</option>
+                    <option value="kamer tijm">Kamer Tijm</option>
+                    <option value="kamer lavendel">Kamer Lavendel</option>
+                    <option value="vakantiehuisje">
+                      Vakantiehuisje 't Wijnstokje
+                    </option></select
+                  ><span class="error" id="logement_error"></span>
+                </div>
               </div>
+
+              <div class="spacebtw">
+                <label for="aantalbezoekers">Aantal personen</label>
+                <input
+                  type="number"
+                  id="aantalbezoekers"
+                  min="1"
+                  max="4"
+                  required
+                />
+              </div>
+              <span class="error" id="aantalbezoekers_error"></span>
+              <span class="flex end">Berekende prijs: €130,00</span>
             </div>
-
-            <span class="flex start"
-              >Inchecken is mogelijk tussen 10:00 en 15:00</span
-            >
-          </div>
-
-          <div class="column spacebtw">
-            <div class="spacebtw">
-              <label for="logement">Keuze logement</label>
-              <select id="logement" required>
-                <option value="">Maak een keuze</option>
-                <option value="kamer tijm">Kamer Tijm</option>
-                <option value="kamer lavendel">Kamer Lavendel</option>
-                <option value="vakantiehuisje">
-                  Vakantiehuisje 't Wijnstokje
-                </option>
-              </select>
-              <span class="error" id="logement_error"></span>
-            </div>
-
-            <div class="spacebtw">
-              <label for="aantalbezoekers">Aantal personen</label>
-              <input
-                type="number"
-                id="aantalbezoekers"
-                min="1"
-                max="4"
-                required
-              /><span class="error" id="aantalbezoekers_error"></span>
-            </div>
-
-            <span class="flex end">Berekende prijs: €130,00</span>
           </div>
         </div>
 
         <hr />
-
-        <section class="contactgegevens">
-          <h2 class="center">Contact gegevens</h2>
-          <div class="spacebtw">
-            <div class="column spacebtw">
-              <label for="voornaam">Voornaam</label
-              ><input type="text" id="voornaam" required />
-              <span class="error" id="voornaam_error"></span>
-              <label for="email">E-mailadres</label
-              ><input type="email" id="email" required />
-              <span class="error" id="email_error"></span>
-              <label for="telefoonnr">Telefoonnummer</label
-              ><input type="tel" id="telefoonnr" required />
-              <span class="error" id="telefoonnr_error"></span>
-            </div>
-
-            <div class="column">
-              <label for="achternaam">Achternaam</label
-              ><input type="text" id="achternaam" required />
-              <span class="error" id="achternaam_error"></span>
-              <label for="emailherhaal">Herhaal e-mailadres</label
-              ><input type="email" id="emailherhaal" required />
-              <span class="error" id="emailherhaal_error"></span>
-            </div>
-          </div>
-        </section>
-        <hr />
-
-        <section class="adresgegevens">
-          <h2 class="center">Adres gegevens</h2>
-
-          <div class="center">
+        <div class="center">
+          <section class="contactgegevens column">
+            <h2 class="center">Contact gegevens</h2>
             <div class="column">
               <div class="spacebtw">
                 <div class="column">
+                  <label for="voornaam">Voornaam</label
+                  ><input type="text" id="voornaam" required />
+                  <span class="error" id="voornaam_error"></span>
+                </div>
+                <div class="column">
+                  <label for="achternaam">Achternaam</label
+                  ><input type="text" id="achternaam" required />
+                  <span class="error" id="achternaam_error"></span>
+                </div>
+              </div>
+              <div class="spacebtw">
+                <div class="column">
+                  <label for="email">E-mailadres</label
+                  ><input type="email" id="email" required />
+                  <span class="error" id="email_error"></span>
+                </div>
+                <div class="column">
+                  <label for="emailherhaal">Herhaal e-mailadres</label
+                  ><input type="email" id="emailherhaal" required />
+                  <span class="error" id="emailherhaal_error"></span>
+                </div>
+              </div>
+              <div class="spacebtw">
+                <div class="column">
+                  <label for="telefoonnr">Telefoonnummer</label
+                  ><input type="tel" id="telefoonnr" required />
+                  <span class="error" id="telefoonnr_error"></span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <hr />
+        <div class="center">
+          <section class="adresgegevens column">
+            <h2 class="center">Adres gegevens</h2>
+
+            <div class="column">
+              <div class="flex">
+                <div class="column marginright">
                   <label for="straat">Straatnaam</label>
                   <input type="text" id="straat" required />
                   <span class="error" id="straat_error"></span>
                 </div>
 
-                <div class="column">
+                <div class="column nrbus marginright">
                   <label for="straatnummer">Nr</label>
                   <input type="text" id="straatnummer" required />
                   <span class="error" id="straatnummer_error"></span>
                 </div>
 
-                <div class="column">
+                <div class="column nrbus">
                   <label for="bus">Bus</label>
                   <input type="text" id="bus" />
                 </div>
               </div>
 
-              <div class="spacebtw">
-                <div class="column">
+              <div class="flex">
+                <div class="column post marginright">
                   <label for="postcode">Postcode</label>
                   <input type="text" id="postcode" required />
                   <span class="error" id="postcode_error"></span>
                 </div>
-                <div class="column">
+                <div class="column wnplts">
                   <label for="plaats">Woonplaats</label>
                   <input type="text" id="plaats" required />
                   <span class="error" id="plaats_error"></span>
@@ -189,8 +203,8 @@
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
         <hr />
 
         <div class="gelezen">
@@ -202,8 +216,9 @@
               en ik ga akkoord met
               <a href="voorwaarden.html" target="_blank">de voorwaarden</a
               >.</label
-            ><span class="error" id="voorwaarden_error"></span>
+            >
           </div>
+          <span class="error center" id="voorwaarden_error"></span>
         </div>
 
         <div class="center">
